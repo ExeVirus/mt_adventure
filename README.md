@@ -1,4 +1,6 @@
-# Minetest Game
+# Minetest Adventure
+
+https://stackoverflow.com/questions/27904532/how-do-i-make-a-self-extract-and-running-installer
 
 The default game bundled in the Minetest engine.  
 
