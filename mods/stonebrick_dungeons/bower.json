@@ -1,0 +1,20 @@
+{
+  "name": "stonebrick_dungeons",
+  "description": "Turns newly generated cobblestone dungeons into stonebrick.",
+  "keywords": [
+    "dungeon", "dungeons"
+  ],
+  "homepage": "https://content.minetest.net/packages/Hamlet/stonebrick_dungeons/",
+  "forum": "https://forum.minetest.net/viewtopic.php?t=18457",
+  "screenshots": [
+    "https://codeberg.org/Hamlet/stonebrick_dungeons/src/branch/master/screenshot.png"
+  ],
+  "authors": [
+    "Hamlet"
+  ],
+  "license": "EUPL-1.2",
+  "dependencies": {
+    "default": "https://github.com/minetest/minetest_game/tree/master/mods/default",
+    "stairs": "https://github.com/minetest/minetest_game/tree/master/mods/stairs"
+  }
+}

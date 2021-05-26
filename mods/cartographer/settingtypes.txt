@@ -1,0 +1,14 @@
+# The default size of new maps, in tiles
+default_size (Default Map Size) int 40 5 80
+
+# The frequency that maps are filled in as players explore, in seconds. Set to 0 to disable.
+autofill_freq (Map Auto-Fill Frequency) int 5 0 60
+
+# The frequency that this mod saves its data to mod storage, in seconds. Set to 0 to disable.
+autosave_freq (Data Auto-Save Frequency) int 60 0 3600
+
+# The frequency that this mod scans already-generated map data to fill in existing terrain, in seconds. Set to 0 to disable.
+backup_scan_freq (Map Scan Frequency) int 5 0 3600
+
+# The number of map sections that this mod scans at a time. Set to 0 to scan all relevant areas
+backup_scan_count (Map Scan Rate) int 20 0 100

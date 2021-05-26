@@ -1,0 +1,65 @@
+Mobs Redo
+Mobs Animal
+Mobs NPC
+Mob Horse
+Mobs_water
+creeper
+dmobs
+3d_armor
+farming
+mesecons
+moreblocks
+unified_inventory
+draconis
+nether
+home_decor_modpack (lite version preferred)
+hangglider
+biome_lib
+bonemeal
+travelnet
+https://content.minetest.net/packages/Liil/livingnether/
+bows (by tenplus1)
+https://content.minetest.net/packages/theFox/working_villages/
+stamina
+https://content.minetest.net/packages/Krock/boost_cart/
+bike
+hot_air_balloons
+https://content.minetest.net/packages/paramat/snowdrift/
+https://content.minetest.net/packages/LNJ/drawers/
+ambience
+https://content.minetest.net/packages/Termos/sailing_kit/
+https://content.minetest.net/packages/random_geek/auroras/
+https://content.minetest.net/packages/FaceDeer/castle_gates/
+https://content.minetest.net/packages/LMD/magic_potions/
+caverealms lite
+algae
+https://content.minetest.net/packages/AFCM/farming_flood/
+https://content.minetest.net/packages/Hamlet/stonebrick_dungeons/
+falls
+travelnet
+mpd
+airtanks
+flowerpot
+ropes
+bucket_wooden
+orienteering
+playerplus
+cartographer
+stamina
+snowball
+tpr
+sickles
+fireflies
+bouncy_bed
+bell
+fiftySix's bottle mod
+sounding_line
+calendar
+https://forum.minetest.net/viewtopic.php?f=11&t=15912
+grappling_hook
+replacer
+moreblocks (remove from unified inv)
+(farming redo) https://forum.minetest.net/viewtopic.php?f=11&t=9019
+fireworks from BLS
+(skinsdb) https://forum.minetest.net/viewtopic.php?f=11&t=17899
+

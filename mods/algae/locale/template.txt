@@ -1,0 +1,9 @@
+# textdomain: algae
+
+
+### init.lua ###
+
+Medium algae=
+Node is protected.=
+Thick algae=
+Thin algae=

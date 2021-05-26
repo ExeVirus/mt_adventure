@@ -1,0 +1,1 @@
+Turns newly generated cobblestone dungeons into stonebrick.

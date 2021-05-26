@@ -1,0 +1,11 @@
+#File Name		Time	Gain	Title
+StrangelyBeautifulShort	3:01	0.7	Strangely Beautyful
+AvalonShort		2:58	1.4	Avalon
+eastern_feeling		3:51	1.0	Eastern Feeling
+EtherealShort		3:04	0.7	Ethereal
+FarawayShort		3:05	0.7	Faraway
+bensound_deepblue	4:48	1.0	Deep Blue
+bensound_ofeliasdream	4:59	1.0	Ofelia's Dream
+bensound_slowmotion	3:26	1.0	Slowmotion
+rainymemory		2:10	1.0	Rainy Memory
+anonnp4014		2:30	1.6	Yawning Lion

@@ -1,0 +1,6 @@
+image: lidashuang/lua:latest
+
+test:
+    stage: test
+    script:
+        - luacheck .

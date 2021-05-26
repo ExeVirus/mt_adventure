@@ -1,0 +1,15 @@
+[submodule "doc"]
+	path = doc
+	url = http://repo.or.cz/minetest_doc.git
+[submodule "doc_items"]
+	path = doc_items
+	url = http://repo.or.cz/minetest_doc_items.git
+[submodule "doc_identifier"]
+	path = doc_identifier
+	url = http://repo.or.cz/minetest_doc_identifier.git
+[submodule "doc_basics"]
+	path = doc_basics
+	url = http://repo.or.cz/minetest_doc_basics.git
+[submodule "doc_encyclopedia"]
+	path = doc_encyclopedia
+	url = http://repo.or.cz/minetest_doc_encyclopedia.git

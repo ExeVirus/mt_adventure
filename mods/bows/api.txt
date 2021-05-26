@@ -1,0 +1,49 @@
+
+Here is an example of how to register a bow:
+
+bows.register_bow("bow_wood",{
+	description = "Wooden bow",
+	texture = "bows_bow.png",
+	texture_loaded = "bows_bow_loaded.png",
+	uses = 50, -- How many time you can use a bow to shoot
+	level = 1, -- Higher levels mean faster arrows
+
+	-- Crafting recipe to make bow, can be left nil
+	craft = {
+		{"", "group:stick", "farming:string"},
+		{"group:stick", "", "farming:string"},
+		{"", "group:stick", "farming:string"}
+	},
+})
+
+
+Here is an example of how to register an arrow:
+
+bows.register_arrow("arrow_steel",{
+	description = "Steel arrow",
+	-- Arrow texture, the ^[colorize section changes the default arrows colour
+	texture = "bows_arrow_wood.png^[colorize:#FFFFFFcc",
+	damage = 8, -- How many 1/2 hearts damage it can do
+	craft_count = 4, -- How many arrows are made from recipe below
+
+	craft = {
+		{"default:steel_ingot", "group:stick", bows.feather}
+	},
+
+	-- Special function when an entity or mob is hit
+	on_hit_object = function(self, target, hp, user, lastpos)
+		if target:get_luaentity().name == "mob_horse:horse" then
+			print ("--- aww da horsey!!! " .. hp .. " damage points!")
+		end
+	end,
+
+	-- Special function when arrow hits a node
+	on_hit_node = function(self, pos, user, arrow_pos)
+		if self.node.name == "default:glass" then
+			minetest.sound_play("default_break_glass", {
+				pos = pos, gain = 1.0, max_hear_distance = 10})
+			minetest.remove_node(pos)
+			minetest.add_item(pos, "vessels:glass_fragments")
+		end
+	end,
+})

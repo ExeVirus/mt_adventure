@@ -1,0 +1,31 @@
+# ENG: Notify dungeons' positions using the chat.
+#
+# ITA: notifica la posizione dei sotterranei usando la chat.
+stonebrick_dungeons_dungeon_notify (Notify dungeon's position) bool false
+
+# ENG: Whether if the cobblestone floor should be changed to stone, desert
+#      stone, etc.
+#
+# ITA: se si devono cambiare i pavimenti di ciottoli in pieta, pietra del
+#      deserto, ecc.
+stonebrick_dungeons_change_floor (Change cobblestone floor) bool false
+
+# ENG: Wheter if dungeon sets should be biome-independent.
+#
+# ITA: se i set di sotterranei debbano essere indipendenti dal bioma.
+stonebrick_dungeons_random_set (Choose random dungeon set) bool false
+
+# ENG: Replace nodes using the VoxelManip or minetest.set_node
+#
+# ITA: sostituire i nodi usando il VoxelManip o minetest.set_node
+stonebrick_dungeons_voxelmanip (Use the voxel manipulator) bool true
+
+# ENG: Delay (in seconds) after which the dungeon's nodes get replaced.
+#
+# ITA: ritardo (in secondi) dopo cui vengono sostituiti i nodi del sotterraneo.
+stonebrick_dungeons_delay (Replacement delay) float 2.0
+
+# ENG: Maximum offset from the dungeon's central point (for the scanner).
+#
+# ITA: spostamento massimo dal punto centrale del sotterraneo (per il rilevatore).
+stonebrick_dungeons_max_offset (Maximum nodes offset) int 22

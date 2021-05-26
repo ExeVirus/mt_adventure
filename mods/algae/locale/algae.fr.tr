@@ -1,0 +1,9 @@
+# textdomain: algae
+
+
+### init.lua ###
+
+Medium algae=Algues moyennes
+Node is protected.=Le bloc est protégé.
+Thick algae=Algues épaisses
+Thin algae=Algues fines

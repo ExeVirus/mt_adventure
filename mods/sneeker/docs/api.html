@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Sneeker mod for Minetest</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>sneeker</h1>
+
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Settings">Settings</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><strong>settings.lua</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>settings.lua</code></h1>
+<p>Settings for sneeker mod.</p>
+<p>
+
+</p>
+
+
+<h2><a href="#Settings">Settings</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.lifespan">sneeker.lifespan</a></td>
+	<td class="summary">How long (in seconds) sneeker remains in world after spawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.boom_gain">sneeker.boom_gain</a></td>
+	<td class="summary">Loudness of explosion.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_require_player_nearby">sneeker.spawn_require_player_nearby</a></td>
+	<td class="summary">Determines whether or not a player must be close for spawn to occur.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_player_radius">sneeker.spawn_player_radius</a></td>
+	<td class="summary">Distance in nodes a player must be for spawn to occur.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.despawn_player_far">sneeker.despawn_player_far</a></td>
+	<td class="summary">If enabled, mobs not near any players will despawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.despawn_player_radius">sneeker.despawn_player_radius</a></td>
+	<td class="summary">Distance determining if a player is near enough to prevent despawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_chance">sneeker.spawn_chance</a></td>
+	<td class="summary">Sets possibility for spawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_interval">sneeker.spawn_interval</a></td>
+	<td class="summary">Sets frequency of spawn chance.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_minlight">sneeker.spawn_minlight</a></td>
+	<td class="summary">Sets the minimum light that a node must have for spawn to occur.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_maxlight">sneeker.spawn_maxlight</a></td>
+	<td class="summary">Sets the maximum light that a node can have for spawn to occur.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_minheight">sneeker.spawn_minheight</a></td>
+	<td class="summary">Sets the lowest position at which sneeker can spawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_maxheight">sneeker.spawn_maxheight</a></td>
+	<td class="summary">Sets the highest position at which sneeker can spawn.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#sneeker.spawn_mapblock_limit">sneeker.spawn_mapblock_limit</a></td>
+	<td class="summary">Limits the number of entities that can spawn per mapblock (16x16x16).</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="Settings"></a>Settings</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "sneeker.lifespan"></a>
+    <strong>sneeker.lifespan</strong>
+    </dt>
+    <dd>
+    How long (in seconds) sneeker remains in world after spawn.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>900 (15 minutes)</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.boom_gain"></a>
+    <strong>sneeker.boom_gain</strong>
+    </dt>
+    <dd>
+    Loudness of explosion.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>float</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>1.5</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_require_player_nearby"></a>
+    <strong>sneeker.spawn_require_player_nearby</strong>
+    </dt>
+    <dd>
+    Determines whether or not a player must be close for spawn to occur.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>bool</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>true</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_player_radius"></a>
+    <strong>sneeker.spawn_player_radius</strong>
+    </dt>
+    <dd>
+    Distance in nodes a player must be for spawn to occur. </p>
+
+<p>  Only used if <a href="api.html#sneeker.spawn_require_player_nearby">sneeker.spawn_require_player_nearby</a> enabled.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>100</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.despawn_player_far"></a>
+    <strong>sneeker.despawn_player_far</strong>
+    </dt>
+    <dd>
+    If enabled, mobs not near any players will despawn.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>bool</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>true</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.despawn_player_radius"></a>
+    <strong>sneeker.despawn_player_radius</strong>
+    </dt>
+    <dd>
+    Distance determining if a player is near enough to prevent despawn. </p>
+
+<p>  Only used if <a href="api.html#sneeker.despawn_player_far">sneeker.despawn_player_far</a> enabled.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>500</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_chance"></a>
+    <strong>sneeker.spawn_chance</strong>
+    </dt>
+    <dd>
+    Sets possibility for spawn. </p>
+
+<p>  Inverted value (e.g. 10000 = 1/10000).
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>10000</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_interval"></a>
+    <strong>sneeker.spawn_interval</strong>
+    </dt>
+    <dd>
+    Sets frequency of spawn chance.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>240 (4 minutes)</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_minlight"></a>
+    <strong>sneeker.spawn_minlight</strong>
+    </dt>
+    <dd>
+    Sets the minimum light that a node must have for spawn to occur. </p>
+
+<p>  Value can be set between 0 (no light) &amp; 15 (max light).
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>0</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_maxlight"></a>
+    <strong>sneeker.spawn_maxlight</strong>
+    </dt>
+    <dd>
+    Sets the maximum light that a node can have for spawn to occur. </p>
+
+<p>  Value can be set between 0 (no light) &amp; 15 (max light).
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>4</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_minheight"></a>
+    <strong>sneeker.spawn_minheight</strong>
+    </dt>
+    <dd>
+    Sets the lowest position at which sneeker can spawn.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>-31000</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_maxheight"></a>
+    <strong>sneeker.spawn_maxheight</strong>
+    </dt>
+    <dd>
+    Sets the highest position at which sneeker can spawn.
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>31000</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "sneeker.spawn_mapblock_limit"></a>
+    <strong>sneeker.spawn_mapblock_limit</strong>
+    </dt>
+    <dd>
+    Limits the number of entities that can spawn per mapblock (16x16x16).
+
+    </ul>
+    </ul>
+    </ul>
+    </ul>
+    <h3>Type:</h3>
+    <ul>
+         <i>int</i>
+    </ul>
+    <h3>Default:</h3>
+    <ul>
+         <i>1</i>
+    </ul>
+    </ul>
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/AntumDeluge/LDoc">LDoc 1.4.6-antum-2</a></i>
+<i style="float:right;">Last updated 2021-05-08 21:15:42 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
