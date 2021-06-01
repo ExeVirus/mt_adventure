@@ -1,34 +1,97 @@
-# Minetest Game
+# TODO
+- Mod Completion (documentation, review, optimization, support)
+    - 3d_armor
+    - airtanks
+    - algae
+    - beds
+    - bell
+    - bike
+    - binoculars
+    - boats
+    - bonemeal
+    - bones
+    - boost_cart
+    - bottle_message
+    - bouncy_bed
+    - bows
+    - bucket
+    - butterflies
+    - cartographer
+    - cartographer_minetest_game
+    - carts
+    - castle_gates
+    - caverealms_lite
+    - creative
+    - default
+    - dmobs
+    - doors
+    - drawers
+    - dungeon_loot
+    - dye
+    - env_sounds
+    - falls
+    - farming
+    - farming_flood
+    - fire
+    - fireflies
+    - flowerpot
+    - flowers
+    - game_commands
+    - give_initial_stuff
+    - grappling_hook
+    - hangglider
+    - holidays
+    - homedecor_modpack
+    - hot_air_balloons
+    - livingnether
+    - magic_potions
+    - map
+    - mesecons
+    - minetest_calendar
+    - minetest_doc_modpack
+    - minetest_orienteering
+    - mobs_animal
+    - mobs_npc
+    - mobs_redo
+    - mobs_water
+    - mob_horse
+    - moreblocks
+    - mpd
+    - mtg_craftguide
+    - nether
+    - playerplus
+    - player_api
+    - replacer
+    - ropes
+    - sailing_kit
+    - screwdriver
+    - sethome
+    - sfinv
+    - sickles
+    - skinsdb
+    - smart_inventory
+    - sneeker
+    - snowball
+    - sounding_line
+    - spawn
+    - stairs
+    - stamina
+    - stonebrick_dungeons
+    - tnt
+    - tpr
+    - travelnet
+    - vessels
+    - walls
+    - weather
+    - wooden_bucket
+    - wool
+    - xpanes
+- Menu Files
+- Licenses
+- Music
+- Balance
 
-The default game bundled in the Minetest engine.  
-
-For further information, check 
-[this forum topic](https://forum.minetest.net/viewtopic.php?f=15&t=9724).   
-Also see the [Minetest Wiki](https://wiki.minetest.net/Subgames/Minetest_Game) 
-for more information.
-
-## Installation
-
-- Unzip the archive, rename the folder to minetest_game and
-place it in .. minetest/games/
-
-- GNU/Linux: If you use a system-wide installation place
-    it in ~/.minetest/games/.
-
-The Minetest engine can be found at [GitHub](https://github.com/minetest/minetest).
-
-For further information or help, see:  
-https://wiki.minetest.net/Installing_Mods
-
-## Compatibility
-
-The Minetest Game GitHub master HEAD is generally compatible with the GitHub
-master HEAD of the Minetest engine.  
-Additionally, when the Minetest engine is tagged to be a certain version (e.g.
-0.4.10), Minetest Game is tagged with the version too.
-
-When stable releases are made, Minetest Game and the Minetest engine is packaged 
-and made available at [www.minetest.net](https://www.minetest.net/downloads/).
+# MT Adventure
 
 ## Licensing
 
