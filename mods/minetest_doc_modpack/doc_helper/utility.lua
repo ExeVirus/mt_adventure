@@ -37,14 +37,14 @@ util.generate_translations = function(modname, folder_path, filename)
 	local filelines = io.lines(folder_path .. DIR_DELIM .. filename)
 	local modpath = minetest.get_modpath(modname)
 	minetest.mkdir(modpath .. DIR_DELIM .. "locale")
-	local oldfile = assert(io.open(modpath .. DIR_DELIM .. "locale" .. DIR_DELIM .. "template.txt", "a+b"))
+	local oldfile = assert(io.open(modpath .. DIR_DELIM .. "locale" .. DIR_DELIM .. "templateDoc.txt", "a+b"))
 	--example: default_doc_wood
 	local textDomain = modname .. "_doc_" .. string.sub(filename, 1, -5)
 	--first delete the section, loading the remainder into tmpFile
 	local remainder = delete_section(textDomain, oldfile)
 	oldfile:close()
 	--reopen in order to overwrite the file
-	local newfile = assert(io.open(modpath .. DIR_DELIM .. "locale" .. DIR_DELIM .. "template.txt", "wb"))
+	local newfile = assert(io.open(modpath .. DIR_DELIM .. "locale" .. DIR_DELIM .. "templateDoc.txt", "wb"))
 	--write out the remainder after the deletion
 	newfile:write(remainder)
 	
@@ -57,13 +57,31 @@ util.generate_translations = function(modname, folder_path, filename)
 end
 
 --------------------------------
---
---
---
---
+-- create_entries
+-- Reads the provided "file.ent" entry file
+-- and the assumed "file.img" img file and 
+-- calls the doc.add_entry to insert into the built-in documentation
 --------------------------------
-util.create_entries = function(modname, folder_path, filename)
-
+util.create_entries = function(modname, folder_path, filename, category)
+	local doclines = io.lines(folder_path .. DIR_DELIM .. filename)
+	local imglines = io.lines(folder_path .. DIR_DELIM .. string.sub(filename, 1, -5) .. ".img")
+	local textDomain = modname .. "_doc_" .. string.sub(filename, 1, -5)
+	local S = minetest.get_translator(textDomain)
+	local document = ""
+	for line in doclines do
+		document = document .. S(line) .. "\n"
+	end
+	local imagelist = {}
+	for img in imglines do
+		table.insert(imagelist, {image=img})
+	end
+	doc.add_entry(category, modname, {
+		name = minetest.get_translator(modname)(modname), --Modname is assumed to the be translator for everything that's not covered by doc
+		data = {
+			text = document,
+			images = imagelist,
+		}
+	})
 end
 
 return util
