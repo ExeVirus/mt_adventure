@@ -1,0 +1,14 @@
+Beds
+-----------------
+Beds allow players to skip the night by sleeping.
+To sleep, right click on the bed. 
+In singleplayer mode, the night gets skipped immediately.
+If multiplayer mode, you see how many other players are in bed too,
+if all players are sleeping the night gets skipped. 
+The night skip can be forced if more than half of 
+the players are lying in bed and use this option.
+-----------------
+Another feature is a controlled respawning. 
+If you have slept in bed (not just lying in it)
+your respawn point is set to the beds location
+and you will respawn there after death.

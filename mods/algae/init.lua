@@ -5,6 +5,19 @@ local S = minetest.get_translator("algae")
 -- Algae
 --
 
+-----Load documentation via doc_helper------------------------
+local MP = minetest.get_modpath(minetest.get_current_modname())
+local docpath = MP .. DIR_DELIM .. "doc"
+doc.add_category("_aglae",
+{
+	name = "_algae",
+	description = "Algae Mod Documentation",
+	build_formspec = doc.entry_builders.text_and_square_gallery,
+})
+doc.build_entries(docpath, "_algae")
+
+------Registrations--------
+
 local algae_thin_def = {
 	description = S("Thin algae"),
 	drawtype = "nodebox",

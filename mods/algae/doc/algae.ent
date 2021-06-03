@@ -1,0 +1,11 @@
+Algae
+-----------------
+The algae mod implements 3 different decorative algae mosses.
+"Thin", "Medium", and "Thick"
+These will appear in:
+1. Forest biomes near the shore
+2. Savana biomes near the shore
+3. Rainforest Biomes near papyrus
+-----------------
+* They are purely decorative.
+* When placed, they will be given a random rotation.
