@@ -26,6 +26,12 @@ local function delete_section(textDomain, file)
 	return remainder
 end
 
+local function file_exists(name)
+   local f=io.open(name,"r")
+   if f~=nil then io.close(f) return true else return false end
+end
+
+
 -------------------------------
 -- generate_translations
 -- folder path is path to filename
@@ -64,19 +70,23 @@ end
 --------------------------------
 util.create_entries = function(modname, folder_path, filename, category)
 	local doclines = io.lines(folder_path .. DIR_DELIM .. filename)
-	local imglines = io.lines(folder_path .. DIR_DELIM .. string.sub(filename, 1, -5) .. ".img")
-	local textDomain = modname .. "_doc_" .. string.sub(filename, 1, -5)
+	local filename_noext = string.sub(filename, 1, -5)
+	local textDomain = modname .. "_doc_" .. filename_noext
 	local S = minetest.get_translator(textDomain)
 	local document = ""
 	for line in doclines do
 		document = document .. S(line) .. "\n"
 	end
 	local imagelist = {}
-	for img in imglines do
-		table.insert(imagelist, {image=img})
+	local imgfile = folder_path .. DIR_DELIM .. filename_noext .. ".img"
+	if(file_exists(imgfile)) then
+		local imglines = io.lines(imgfile)
+		for img in imglines do
+			table.insert(imagelist, {image=img})
+		end
 	end
-	doc.add_entry(category, modname, {
-		name = minetest.get_translator(modname)(modname), --Modname is assumed to the be translator for everything that's not covered by doc
+	doc.add_entry(category, modname.."_"..filename_noext, {
+		name = minetest.get_translator(modname)(modname).."_"..filename_noext, --Modname is assumed to the be translator for everything that's not covered by doc
 		data = {
 			text = document,
 			images = imagelist,

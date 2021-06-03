@@ -15,7 +15,7 @@ local MP = minetest.get_modpath(minetest.get_current_modname())
 local util = assert(dofile(MP .. DIR_DELIM .. "utility.lua"))
 
 --category is assumed to exist, and is a string
-function doc.build_entries(path, category)
+doc.build_entries = function(path, category)
 	local modname = minetest.get_current_modname()
 	local filelist = minetest.get_dir_list(path, false) --get all files
 	
@@ -29,4 +29,10 @@ function doc.build_entries(path, category)
 end
 
 local docpath = MP .. DIR_DELIM .. "doc"
-doc.build_entries(docpath, "doc_helper")
+doc.add_category("fun",
+{
+	name = "fun",
+	description = "FUN!",
+	build_formspec = doc.entry_builders.text_and_gallery,
+})
+doc.build_entries(docpath, "fun")
