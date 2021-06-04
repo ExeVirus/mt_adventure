@@ -27,33 +27,3 @@ doc.build_entries = function(path, category)
 		end
 	end
 end
-
--- Scrollable freeform text with an optional standard gallery (3 rows, 1:1 aspect ratio)
-doc.entry_builders.text_and_square_gallery = function(data, playername)
-	-- How much height the image gallery “steals” from the text widget
-	local stolen_height = 0
-	local formstring = ""
-	-- Only add the gallery if images are in the data, otherwise, the text widget gets all of the space
-	if data.images ~= nil then
-		local gallery
-		gallery, stolen_height = doc.widgets.gallery(data.images, playername, nil, doc.FORMSPEC.ENTRY_END_Y + 0.2, 1, nil, nil, nil, false)
-		formstring = formstring .. gallery
-	end
-	formstring = formstring .. doc.widgets.text(data.text,
-		doc.FORMSPEC.ENTRY_START_X,
-		doc.FORMSPEC.ENTRY_START_Y,
-		doc.FORMSPEC.ENTRY_WIDTH - 0.4,
-		doc.FORMSPEC.ENTRY_HEIGHT - stolen_height)
-	return formstring
-end
-
-
-
-local docpath = MP .. DIR_DELIM .. "doc"
-doc.add_category("fun",
-{
-	name = "fun",
-	description = "FUN!",
-	build_formspec = doc.entry_builders.text_and_square_gallery,
-})
-doc.build_entries(docpath, "fun")

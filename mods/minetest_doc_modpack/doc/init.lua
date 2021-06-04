@@ -479,6 +479,25 @@ doc.entry_builders.text_and_gallery = function(data, playername)
 	return formstring
 end
 
+-- Scrollable freeform text with an optional standard gallery (3 rows, 1:1 aspect ratio)
+doc.entry_builders.text_and_square_gallery = function(data, playername)
+	-- How much height the image gallery “steals” from the text widget
+	local stolen_height = 0
+	local formstring = ""
+	-- Only add the gallery if images are in the data, otherwise, the text widget gets all of the space
+	if data.images ~= nil then
+		local gallery
+		gallery, stolen_height = doc.widgets.gallery(data.images, playername, nil, doc.FORMSPEC.ENTRY_END_Y + 0.2, 1, doc.FORMSPEC.ENTRY_WIDTH*3/5, 5, nil, false, nil)
+		formstring = formstring .. gallery
+	end
+	formstring = formstring .. doc.widgets.text(data.text,
+		doc.FORMSPEC.ENTRY_START_X,
+		doc.FORMSPEC.ENTRY_START_Y,
+		doc.FORMSPEC.ENTRY_WIDTH - 0.4,
+		doc.FORMSPEC.ENTRY_HEIGHT - stolen_height)
+	return formstring
+end
+
 doc.widgets = {}
 
 -- Scrollable freeform text
@@ -508,7 +527,7 @@ end
 
 -- Image gallery
 -- Currently, only one gallery per entry is supported. TODO: Add support for multiple galleries in an entry (low priority)
-doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width, rows, align_left, align_top)
+doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width, rows, align_left, align_top, button_width)
 	if playername == nil then return nil end -- emergency exit
 
 	local formstring = ""
@@ -542,7 +561,7 @@ doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width,
 	if aspect_ratio == nil then aspect_ratio = (2/3) end
 	local pos = 0
 	local totalimagewidth, iw, ih
-	local bw = 0.5
+	local bw = button_width or 0.5
 	local buttonoffset = 0
 	if #imagedata > rows then
 		totalimagewidth = width - bw*2
@@ -562,6 +581,7 @@ doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width,
 			end
 			formstring = formstring .. "tooltip[doc_button_gallery_prev;"..tt.."]"
 		end
+		buttonoffset = bw
 		if (imageindex + rows) <= #imagedata then
 			local rightx = buttonoffset + (x + rows * iw)
 			formstring = formstring .. "button["..rightx..","..y..";"..bw..","..ih..";doc_button_gallery_next;"..F(">").."]"
@@ -572,7 +592,6 @@ doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width,
 			end
 			formstring = formstring .. "tooltip[doc_button_gallery_next;"..tt.."]"
 		end
-		buttonoffset = bw
 	else
 		totalimagewidth = width
 		iw = totalimagewidth / rows
@@ -593,7 +612,6 @@ doc.widgets.gallery = function(imagedata, playername, x, y, aspect_ratio, width,
 		formstring = formstring .. "label["..nx..","..ny..";"..i.."]"
 		pos = pos + 1
 	end
-	local bw, bh
 
 	return formstring, ih
 end

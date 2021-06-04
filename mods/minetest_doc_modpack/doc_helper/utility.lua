@@ -85,8 +85,8 @@ util.create_entries = function(modname, folder_path, filename, category)
 			table.insert(imagelist, {image=img})
 		end
 	end
-	doc.add_entry(category, modname.."_"..filename_noext, {
-		name = minetest.get_translator(modname)(modname).."_"..filename_noext, --Modname is assumed to the be translator for everything that's not covered by doc
+	doc.add_entry(category, filename_noext, {
+		name = S(filename_noext),
 		data = {
 			text = document,
 			images = imagelist,
