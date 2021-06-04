@@ -3,6 +3,9 @@
 -- bells ring every hour
 -- they ring as many times as a bell ought to
 
+--Load documentation
+dofile(minetest.get_current_modpath() .. "/documentation.lua")
+
 bell = {};
 
 bell.RING_INTERVAL = 3600; --60*60; -- ring each hour

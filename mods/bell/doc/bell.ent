@@ -1,0 +1,14 @@
+Bell
+-----------------
+Bell that rings every hour as many times as the hour counts (1-12 times)
+Like a church bell or townhall bell
+-----------------
+The positions of placed bells are saved.
+Thus, each bell can ring even if the area is unloaded.
+-----------------
+You can ring a bell manually.
+-----------------
+There is also a small bell (looks like the normal one)
+that can be crafted from gold blocks.
+Unlike the normal bell, this craftable one won't
+ring automaticly and has a much smaller hear distance.

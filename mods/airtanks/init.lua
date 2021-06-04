@@ -1,5 +1,8 @@
 local S = minetest.get_translator(minetest.get_current_modname())
 
+--Load Documentation
+dofile(modpath .. "/documentation.lua")
+
 local print_settingtypes = false
 local CONFIG_FILE_PREFIX = "airtanks_"
 local config = {}

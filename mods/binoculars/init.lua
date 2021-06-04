@@ -1,5 +1,8 @@
 -- binoculars/init.lua
 
+-- Documentation
+dofile(minetest.get_current_modpath() .. "/documentation.lua")
+
 -- Mod global namespace
 
 binoculars = {}
@@ -41,10 +44,10 @@ local function cyclic_update()
 	for _, player in ipairs(minetest.get_connected_players()) do
 		binoculars.update_player_property(player)
 	end
-	minetest.after(4.7, cyclic_update)
+	minetest.after(10.0, cyclic_update)
 end
 
-minetest.after(4.7, cyclic_update)
+minetest.after(10.0, cyclic_update)
 
 
 -- Binoculars item
