@@ -1,0 +1,4 @@
+Rail-Powered
+-----------------
+When powered via Mesecons, a powered rail will speed up traveling carts above.
+When that power is removed, the rail will no longer affect travel speed.

@@ -348,7 +348,7 @@ minetest.register_on_leaveplayer(function(player)
 	pending_players[player] = nil
 end)
 
-if armor.config.drop == true or armor.config.destroy == true then
+if armor.config.drop == true or true then --Always on
 	minetest.register_on_dieplayer(function(player)
 		local name, armor_inv = armor:get_valid_player(player, "[on_dieplayer]")
 		if not name then
@@ -366,35 +366,36 @@ if armor.config.drop == true or armor.config.destroy == true then
 		armor:save_armor_inventory(player)
 		armor:set_player_armor(player)
 		local pos = player:get_pos()
-		if pos and armor.config.destroy == false then
-			minetest.after(armor.config.bones_delay, function()
-				local meta = nil
-				local maxp = vector.add(pos, 16)
-				local minp = vector.subtract(pos, 16)
-				local bones = minetest.find_nodes_in_area(minp, maxp, {"bones:bones"})
-				for _, p in pairs(bones) do
-					local m = minetest.get_meta(p)
-					if m:get_string("owner") == name then
-						meta = m
-						break
-					end
-				end
-				if meta then
-					local inv = meta:get_inventory()
-					for _,stack in ipairs(drop) do
-						if inv:room_for_item("main", stack) then
-							inv:add_item("main", stack)
-						else
-							armor.drop_armor(pos, stack)
-						end
-					end
-				else
-					for _,stack in ipairs(drop) do
-						armor.drop_armor(pos, stack)
-					end
-				end
-			end)
-		end
+		--dsiable drop, only destroy it
+		-- if pos and armor.config.destroy == false then
+			-- minetest.after(armor.config.bones_delay, function()
+				-- local meta = nil
+				-- local maxp = vector.add(pos, 16)
+				-- local minp = vector.subtract(pos, 16)
+				-- local bones = minetest.find_nodes_in_area(minp, maxp, {"bones:bones"})
+				-- for _, p in pairs(bones) do
+					-- local m = minetest.get_meta(p)
+					-- if m:get_string("owner") == name then
+						-- meta = m
+						-- break
+					-- end
+				-- end
+				-- if meta then
+					-- local inv = meta:get_inventory()
+					-- for _,stack in ipairs(drop) do
+						-- if inv:room_for_item("main", stack) then
+							-- inv:add_item("main", stack)
+						-- else
+							-- armor.drop_armor(pos, stack)
+						-- end
+					-- end
+				-- else
+					-- for _,stack in ipairs(drop) do
+						-- armor.drop_armor(pos, stack)
+					-- end
+				-- end
+			-- end)
+		-- end
 	end)
 else -- reset un-dropped armor and it's effects
 	minetest.register_on_respawnplayer(function(player)

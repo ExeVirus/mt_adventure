@@ -1,0 +1,4 @@
+Rail-Brake
+-----------------
+When powered via Mesecons, a brake rail will slow traveling carts above.
+When that power is removed, the brake will no longer affect travel speed.

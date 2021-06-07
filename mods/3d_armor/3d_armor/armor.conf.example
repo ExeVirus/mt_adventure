@@ -49,7 +49,7 @@ ARMOR_UPDATE_TIME = 1
 ARMOR_DROP = true
 
 -- Pulverise armor when a player dies, overrides ARMOR_DROP.
-ARMOR_DESTROY = false
+ARMOR_DESTROY = true
 
 -- You can use this to increase or decrease overall armor effectiveness,
 -- eg: ARMOR_LEVEL_MULTIPLIER = 0.5 will reduce armor level by half.

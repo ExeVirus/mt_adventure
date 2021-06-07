@@ -1,0 +1,4 @@
+Rail-Detector
+-----------------
+When a cart passes over the rail, a mesecon powered signal is
+generated. When the cart leaves, the rail switches to unpowered.

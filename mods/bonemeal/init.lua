@@ -1,5 +1,7 @@
-
 bonemeal = {}
+
+-- Documentation
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 local path = minetest.get_modpath("bonemeal")
 local min, max, random = math.min, math.max, math.random
