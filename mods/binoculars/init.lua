@@ -1,7 +1,7 @@
 -- binoculars/init.lua
 
 -- Documentation
-dofile(minetest.get_current_modpath() .. "/documentation.lua")
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 -- Mod global namespace
 

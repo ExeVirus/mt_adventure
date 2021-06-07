@@ -4,7 +4,7 @@
 -- they ring as many times as a bell ought to
 
 --Load documentation
-dofile(minetest.get_current_modpath() .. "/documentation.lua")
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 bell = {};
 

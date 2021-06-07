@@ -1,7 +1,7 @@
 --[[ Helpers ]]--
 
 -- Documentation
-dofile(minetest.get_current_modpath() .. "/documentation.lua")
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 -- Skin mod detection
 local skin_mod
