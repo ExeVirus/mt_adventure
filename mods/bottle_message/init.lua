@@ -1,11 +1,26 @@
-local possible_messages = {
-    "ooh boy look! you found a message!",
-    "huh isn't this cool? \"someone\" left a message here",
-    "hmm there sure was a lot of effort put into these messages",
-    "I sure wish someone would improve these messages. *Ahem* https://gitlab.com/Fiftysix/bottle_message/ *Ahem*",
-    "Another cool message",
-}
+-- Documentation
+local MP = minetest.get_modpath(minetest.get_current_modname()
+dofile(MP) .. "/documentation.lua")
 
+--message loading functions
+function file_exists(file)
+  local f = io.open(file, "rb")
+  if f then f:close() end
+  return f ~= nil
+end
+
+-- get all lines from a file, returns an empty 
+-- list/table if the file does not exist
+function lines_from(file)
+  if not file_exists(file) then return {} end
+  local Lines = {}
+  for line in io.lines(file) do 
+    Lines[#Lines + 1] = line
+  end
+  return Lines
+end
+
+local possible_messages = lines_from(MP .. "/messages.txt")
 
 -- function to place on top of water instead of in the water
 local function place_on_water(itemstack, placer, pointed_thing)
