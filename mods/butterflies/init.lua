@@ -1,5 +1,8 @@
 -- butterflies/init.lua
 
+-- Documentation
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
+
 -- Load support for MT game translation.
 local S = minetest.get_translator("butterflies")
 
