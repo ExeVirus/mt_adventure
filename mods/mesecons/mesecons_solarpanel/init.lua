@@ -45,7 +45,7 @@ minetest.register_abm({
 		"mesecons_solarpanel:solar_panel_off",
 		"mesecons_solarpanel:solar_panel_on"
 	},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	catch_up = false,
 	action = function(pos, node)

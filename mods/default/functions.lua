@@ -163,7 +163,7 @@ if minetest.settings:get_bool("enable_lavacooling") ~= false then
 		label = "Lava cooling",
 		nodenames = {"default:lava_source", "default:lava_flowing"},
 		neighbors = {"group:cools_lava", "group:water"},
-		interval = 2,
+		interval = 3,
 		chance = 2,
 		catch_up = false,
 		action = function(...)
@@ -666,7 +666,7 @@ minetest.register_abm({
 		"stairs:stair_inner_cobble", "stairs:stair_outer_cobble",
 		"walls:cobble"},
 	neighbors = {"group:water"},
-	interval = 16,
+	interval = 20,
 	chance = 200,
 	catch_up = false,
 	action = function(pos, node)

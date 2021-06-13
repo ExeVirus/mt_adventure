@@ -8,8 +8,8 @@
 local map_data, gui, skin, util, biomes, markers = ...;
 
 -- Constants
-local TILE_SIZE = 0.25;
-local TILE_OFFSET = 0.24; -- Slightly smaller than TILE_SIZE. We overlap tiles slightly to minimize seams
+local TILE_SIZE = 0.50;
+local TILE_OFFSET = 0.48; -- Slightly smaller than TILE_SIZE. We overlap tiles slightly to minimize seams
 
 -- NoiseParams table for tile variations
 local MAP_NOISE = {

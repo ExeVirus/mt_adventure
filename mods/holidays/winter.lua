@@ -47,7 +47,7 @@ if holidays.is_holiday_active("winter") then
         label = "Place Holiday Dirt",
         nodenames = {"default:dirt_with_grass"},
         neighbors = {"air"},
-        interval = 2.3,
+        interval = 3.5,
         chance = 5,
         catch_up = false,
         action = function(pos)
@@ -85,7 +85,7 @@ else
     minetest.register_abm({
         label = "Remove Holiday Ice",
         nodenames = {"holidays:ice"},
-        interval = 1.1,
+        interval = 2.2,
         chance = 10,
         catch_up = false,
         action = function(pos)

@@ -164,7 +164,7 @@ local function on_generated(min, max, _)
         end
     end
 end
-minetest.register_on_generated(on_generated);
+--minetest.register_on_generated(on_generated);
 
 -- Is the scan of this position already handled?
 --

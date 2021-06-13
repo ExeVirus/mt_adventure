@@ -198,10 +198,22 @@ farming.registered_plants["farming:cocoa_beans"] = {
 -- add random cocoa pods to jungle tree's
 minetest.register_on_generated(function(minp, maxp)
 
-	if maxp.y < 0 then
+	if maxp.y < 0 or minp.y < 450 then
 		return
 	end
-
+    
+    local biomemap = minetest.get_mapgen_object().biomemap
+    local rainforest_id = minetest.get_biome_id("rainforest")
+    local rainforest_swamp_id = minetest.get_biome_id("rainforest_swamp")
+    local found_jungle = false
+    for i=1, #biomemap, 1 do
+        if biomemap[i] == rainforest_id or biomemap[i] == rainforest then
+            found_jungle = true
+            break
+        end
+    end
+    if not found_jungle then return end
+    minetest.log("cocoa")
 	local pos, dir
 	local cocoa = minetest.find_nodes_in_area(minp, maxp, "default:jungletree")
 

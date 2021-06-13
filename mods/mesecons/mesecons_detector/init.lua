@@ -119,7 +119,7 @@ minetest.register_craft({
 
 minetest.register_abm({
 	nodenames = {"mesecons_detector:object_detector_off"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node)
 		if not object_detector_scan(pos) then return end
@@ -132,7 +132,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"mesecons_detector:object_detector_on"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node)
 		if object_detector_scan(pos) then return end
@@ -311,7 +311,7 @@ minetest.register_craft({
 
 minetest.register_abm({
 	nodenames = {"mesecons_detector:node_detector_off"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node)
 		if not node_detector_scan(pos) then return end
@@ -324,7 +324,7 @@ minetest.register_abm({
 
 minetest.register_abm({
 	nodenames = {"mesecons_detector:node_detector_on"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node)
 		if node_detector_scan(pos) then return end

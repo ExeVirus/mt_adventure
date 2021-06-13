@@ -270,7 +270,7 @@ if fire_enabled then
 		label = "Ignite flame",
 		nodenames = {"group:flammable"},
 		neighbors = {"group:igniter"},
-		interval = 7,
+		interval = 8,
 		chance = 12,
 		catch_up = false,
 		action = function(pos)
@@ -286,7 +286,7 @@ if fire_enabled then
 		label = "Remove flammable nodes",
 		nodenames = {"fire:basic_flame"},
 		neighbors = "group:flammable",
-		interval = 5,
+		interval = 6,
 		chance = 18,
 		catch_up = false,
 		action = function(pos)

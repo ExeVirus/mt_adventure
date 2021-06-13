@@ -20,16 +20,18 @@ local player_maps = {};
 -- page: The current page
 --
 -- Returns a formspec string for use in containers
+local marker_width = 10
+local marker_height = 10
 local function marker_formspec(selected_id, detail, page)
     local marker_lookup = markers.get_all();
 
     local formspec = {
         gui.button {
-            x = 0.125,
-            y = 0.125,
+            x = marker_width/40,
+            y = marker_width/40,
 
-            w = 1.125,
-            h = 0.5,
+            w = marker_width/4,
+            h = marker_height/10,
 
             id = "clear_marker",
             text = "Erase",
@@ -37,8 +39,8 @@ local function marker_formspec(selected_id, detail, page)
         },
 
         gui.label {
-            x = 1.375,
-            y = 3.5,
+            x = marker_width/3.64,
+            y = marker_height/1.429,
 
             text = string.format("%d / %d", page, math.ceil(#marker_lookup / 20)),
         },
@@ -59,11 +61,11 @@ local function marker_formspec(selected_id, detail, page)
     for i = starting_id,math.min(#marker_lookup,starting_id + 19),1 do
         local marker = marker_lookup[i];
         table.insert(formspec, gui.image_button {
-            x = (i - starting_id) % 5 * 0.625 + 0.125,
-            y = math.floor((i - starting_id) / 5) * 0.625 + 0.75,
+            x = (i - starting_id) % 5 * marker_width/8 + marker_width/40,
+            y = math.floor((i - starting_id) / 5) * marker_height/8 + marker_height / 66.67,
 
-            w = 0.5,
-            h = 0.5,
+            w = marker_width / 10,
+            h = marker_height / 10,
 
             image = marker.textures[math.min(detail, #marker.textures)] .. ".png",
             id = "marker-" .. marker.id,
@@ -73,11 +75,11 @@ local function marker_formspec(selected_id, detail, page)
 
     if page > 1 then
         table.insert(formspec, gui.button {
-            x = 0.125,
-            y = 3.25,
+            x = marker_width/40,
+            y = marker_height/1.538,
 
-            w = 0.5,
-            h = 0.5,
+            w = marker_width/10,
+            h = marker_height/10,
 
             id = "prev_button",
             text = "<"
@@ -86,11 +88,11 @@ local function marker_formspec(selected_id, detail, page)
 
     if starting_id + 19 < #marker_lookup then
         table.insert(formspec, gui.button {
-            x = 2.625,
-            y = 3.25,
+            x = marker_width/1.905,
+            y = marker_height/1.538,
 
-            w = 0.5,
-            h = 0.5,
+            w = marker_width/10,
+            h = marker_height/10,
 
             id = "next_button",
             text = ">"
@@ -146,16 +148,16 @@ local function show_map_formspec(map, player_x, player_z, player_name, height_mo
         },
         gui.container {
             x = formspec_width - 0.01,
-            y = 0.125,
-            w = 0.75,
-            h = 0.75,
+            y = marker_height/40,
+            w = marker_width/66.67,
+            h = marker_height/66.67,
             bg = skin.marker_bg,
 
             gui.image_button {
-                x = 0.125,
-                y = 0.125,
-                w = 0.5,
-                h = 0.5,
+                x = marker_width/40,
+                y = marker_height/40,
+                w = marker_width/10,
+                h = marker_height/10,
 
                 id = "height_button",
                 image = height_button_texture,
@@ -167,9 +169,9 @@ local function show_map_formspec(map, player_x, player_z, player_name, height_mo
     if markers.count() > 0 then
         table.insert(data, gui.container {
                     x = formspec_width - 0.01,
-                    y = 1,
-                    w = 3.25,
-                    h = 3.875,
+                    y = marker_height/5,
+                    w = marker_width/1.538,
+                    h = marker_height/1.29,
                     bg = skin.marker_bg,
 
                     marker_formspec(map:get_marker(player_x, player_z), map.detail, marker_page or 1)});

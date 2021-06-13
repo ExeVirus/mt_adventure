@@ -92,7 +92,7 @@ minetest.register_node("mesecons_torch:mesecon_torch_on", {
 
 minetest.register_abm({
 	nodenames = {"mesecons_torch:mesecon_torch_off","mesecons_torch:mesecon_torch_on"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node)
 		local is_powered = false
