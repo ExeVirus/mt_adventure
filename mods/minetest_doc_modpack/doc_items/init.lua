@@ -1401,7 +1401,7 @@ end)
 TODO: Check whether there's a serious performance impact on servers with many players.
 TODO: If possible, try to replace this functionality by updating the revealed items as
       soon the player obtained a new item (probably needs new Minetest callbacks). ]]
-local checktime = 8
+local checktime = 30
 local timer = 0
 minetest.register_globalstep(function(dtime)
 	timer = timer + dtime

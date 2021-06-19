@@ -1,2 +1,2 @@
 # If bottles should generate with random messages in them. This may discorage players from picking up bottles sent by real players.
-generate_written_bottles (Generate Written Bottles) bool false
+generate_written_bottles (Generate Written Bottles) bool true

@@ -190,7 +190,7 @@ local fdir_to_steampos = {
 minetest.register_abm({
 	nodenames = "homedecor:coffee_maker",
 	label = "sfx",
-	interval = 2,
+	interval = 4,
 	chance = 1,
 	action = function(pos, node)
 		local fdir = node.param2

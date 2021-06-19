@@ -65,7 +65,7 @@ local horizontal_tree_convert_facedir = {7, 12, 9, 18}
 
 minetest.register_abm({
 	nodenames = {"moreblocks:horizontal_tree","moreblocks:horizontal_jungle_tree"},
-	interval = 1,
+	interval = 2.5,
 	chance = 1,
 	action = function(pos, node)
 		if node.name == "moreblocks:horizontal_tree" then

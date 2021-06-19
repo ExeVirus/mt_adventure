@@ -4,6 +4,8 @@
 -- Load support for MT game translation.
 local S = minetest.get_translator("bucket")
 
+-- Documentation
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 minetest.register_alias("bucket", "bucket:bucket_empty")
 minetest.register_alias("bucket_water", "bucket:bucket_water")

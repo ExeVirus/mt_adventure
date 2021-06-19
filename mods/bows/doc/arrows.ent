@@ -1,0 +1,9 @@
+Arrows
+-----------------
+There are four kinds of arrows:
+wood, steel, mese, and diamond
+-----------------
+Each deals more damage than the previous,
+and some have special uses:
+A mese arrow can toggle a mesecon switch
+A diamond arrow can shatter glass

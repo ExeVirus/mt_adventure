@@ -128,7 +128,7 @@ minetest.register_alias("farming:desert_sand_soil_wet", "farming:dry_soil_wet")
 -- if water near soil then change to wet soil
 minetest.register_abm({
 	nodenames = {"group:field"},
-	interval = 15,
+	interval = 18,
 	chance = 4,
 	catch_up = false,
 

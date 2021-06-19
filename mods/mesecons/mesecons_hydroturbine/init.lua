@@ -70,7 +70,7 @@ end
 
 minetest.register_abm({
 nodenames = {"mesecons_hydroturbine:hydro_turbine_off"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local waterpos={x=pos.x, y=pos.y+1, z=pos.z}
@@ -83,7 +83,7 @@ nodenames = {"mesecons_hydroturbine:hydro_turbine_off"},
 
 minetest.register_abm({
 nodenames = {"mesecons_hydroturbine:hydro_turbine_on"},
-	interval = 1,
+	interval = 1.5,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		local waterpos={x=pos.x, y=pos.y+1, z=pos.z}

@@ -4,6 +4,9 @@ if not minetest.features.object_use_texture_alpha then
 		.. " (Version < 5.0.0)")
 end
 
+-- Documentation
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
+
 boost_cart = {}
 boost_cart.modpath = minetest.get_modpath("boost_cart")
 boost_cart.MESECONS = minetest.global_exists("mesecon")

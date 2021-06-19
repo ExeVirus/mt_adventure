@@ -1,0 +1,9 @@
+Buckets
+-----------------
+There are two kinds of buckets: wooden and steel.
+|
+Wooden buckets can only carry water and river water.
+Steel buckets can carry all liquids.
+|
+Left click a liquid source with an empty bucket to capture it
+Right click a dry spot with the filled bucket to dispense the liquid.

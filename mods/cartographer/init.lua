@@ -1,6 +1,10 @@
 -- The path to this mod, for including files
 local modpath = minetest.get_modpath("cartographer");
 
+-- Documentation
+dofile(modpath .. "/documentation.lua")
+
+
 local settings = {
     default_size = tonumber(minetest.settings:get("default_size")) or 40,
     autofill_freq = tonumber(minetest.settings:get("autofill_freq")) or 5,

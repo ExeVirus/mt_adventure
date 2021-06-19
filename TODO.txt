@@ -1,3 +1,10 @@
+0. Biomes need fully documented
+01. Bosses or challenges need to be included
+02. Remove Nyan Cat... or make him less common, sheesh
+03. Update the on_generated()'s
+    a. farming/crops/cocoa.lua
+    b. 
+    c.
 1. Bell mod needs two sound files
 2. Compress all textures, 3d objects, etc.
 3. Fix algae to be useful in other ways, fix bonemeal to not generate them on dirt...

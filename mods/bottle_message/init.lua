@@ -1,11 +1,26 @@
-local possible_messages = {
-    "ooh boy look! you found a message!",
-    "huh isn't this cool? \"someone\" left a message here",
-    "hmm there sure was a lot of effort put into these messages",
-    "I sure wish someone would improve these messages. *Ahem* https://gitlab.com/Fiftysix/bottle_message/ *Ahem*",
-    "Another cool message",
-}
+-- Documentation
+local MP = minetest.get_modpath(minetest.get_current_modname())
+dofile(MP .. "/documentation.lua")
 
+--message loading functions
+function file_exists(file)
+  local f = io.open(file, "rb")
+  if f then f:close() end
+  return f ~= nil
+end
+
+-- get all lines from a file, returns an empty 
+-- list/table if the file does not exist
+function lines_from(file)
+  if not file_exists(file) then return {} end
+  local Lines = {}
+  for line in io.lines(file) do 
+    Lines[#Lines + 1] = line
+  end
+  return Lines
+end
+
+local possible_messages = lines_from(MP .. "/messages.txt")
 
 -- function to place on top of water instead of in the water
 local function place_on_water(itemstack, placer, pointed_thing)
@@ -207,9 +222,9 @@ minetest.register_node("bottle_message:written_bottle", {
         local message = meta:get("bottle_message:message") or "Corrupted Message"
         
         local formspec = "formspec_version[4]"..
-        "size[5,5]"..
-        "textarea[0.2,0.5;4.6,3.5;;Sent by "..author..";".. minetest.formspec_escape(message).."]"..
-        "button_exit[0.2,4;4.6,0.8;save;Exit]"
+        "size[8,8]"..
+        "textarea[0.2,0.5;7.6,6.5;;Sent by "..author..";".. minetest.formspec_escape(message).."]"..
+        "button_exit[0.2,7;7.6,0.8;save;Exit]"
         
         
         minetest.show_formspec(playername, "bottle_message:read_message", formspec)
@@ -234,17 +249,47 @@ minetest.register_craft({
     replacements = {{"bottle_message:written_bottle", "bottle_message:bottle"}},
 })
 
-local generate_type = "bottle_message:bottle"
-if minetest.settings:get_bool("generate_written_bottles") then
-    generate_type = "bottle_message:written_bottle"
-end
+generate_type = "bottle_message:written_bottle"
 
 minetest.register_decoration({
     deco_type = "simple",
     place_on = "default:sand",
     spawn_by = "default:water_source",
     num_spawn_by = 2,
-    fill_ratio = 0.005,
+    fill_ratio = 0.012,
+    decoration = generate_type,
+    param2 = 0,
+    param2_max = 3,
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = "default:gravel",
+    spawn_by = "default:water_source",
+    num_spawn_by = 2,
+    fill_ratio = 0.012,
+    decoration = generate_type,
+    param2 = 0,
+    param2_max = 3,
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = "default:snow",
+    spawn_by = "default:water_source",
+    num_spawn_by = 2,
+    fill_ratio = 0.012,
+    decoration = generate_type,
+    param2 = 0,
+    param2_max = 3,
+})
+
+minetest.register_decoration({
+    deco_type = "simple",
+    place_on = "default:dirt",
+    spawn_by = "default:water_source",
+    num_spawn_by = 2,
+    fill_ratio = 0.012,
     decoration = generate_type,
     param2 = 0,
     param2_max = 3,
@@ -254,7 +299,7 @@ minetest.register_abm({
     label = "Moving bottles in water",
     nodenames = {"bottle_message:written_bottle", "bottle_message:bottle"},
     neighbors = {"default:water_source"},
-    interval = 1,
+    interval = 4,
     chance = 4,
     action = function(pos, node)
     

@@ -1,5 +1,7 @@
-
 -- Bows Mod by UjEdwin
+
+-- Documentation
+dofile(minetest.get_modpath(minetest.get_current_modname()) .. "/documentation.lua")
 
 bows = {
 	pvp = minetest.settings:get_bool("enable_pvp"),
@@ -163,7 +165,5 @@ local path = minetest.get_modpath("bows")
 
 dofile(path .. "/arrow.lua")
 dofile(path .. "/items.lua")
-dofile(path .. "/lucky_block.lua")
-
 
 print ("[MOD] Bows loaded")

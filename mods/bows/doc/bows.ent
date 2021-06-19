@@ -1,0 +1,11 @@
+Bows
+-----------------
+There are three kinds of bows: wood, steel, and bronze.
+Each bow has an increasing lifetime (nuumber of uses)
+-----------------
+The wood bow recipe is:
+     |stick|string
+stick|     |string
+     |stick|string
+-----------------
+Enjoy!

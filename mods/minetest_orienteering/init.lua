@@ -429,7 +429,7 @@ end)
 local updatetimer = 0
 minetest.register_globalstep(function(dtime)
 	updatetimer = updatetimer + dtime
-	if updatetimer > 0.1 then
+	if updatetimer > 0.2 then
 		local players = minetest.get_connected_players()
 		for i=1, #players do
 			orienteering.update_automapper(players[i])

@@ -179,7 +179,7 @@ end
 minetest.register_abm({
 	label = "Farming soil",
 	nodenames = {"group:field"},
-	interval = 15,
+	interval = 18,
 	chance = 4,
 	action = function(pos, node)
 		local n_def = minetest.registered_nodes[node.name] or nil
