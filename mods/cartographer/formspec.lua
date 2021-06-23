@@ -252,18 +252,23 @@ end
 -- (Optional) x: The x position of the element. Defaults to 0.
 -- (Optional) y: The y position of the element. Defaults to 0.
 -- (Optional) bg: A 9-slice background skin object (To display under each slot)
+-- (Optional) bgw: background slot width
+-- (Optional) bgh: background slot height
 -- (Optional) tooltip: The tooltip to display when hovering this element.
 --
 -- Returns a formspec string
 function gui.inventory(args)
     local data = "";
+	
+	local bg_width = args.bgw or 1.25
+	local bg_height = args.bgh or 1.25
 
     if args.bg then
         for i = 0,args.w - 1 do
             for j = 0,args.h - 1 do
                 data = data .. gui.bg9 {
-                    x = args.x + (i * 1.25),
-                    y = args.y + (j * 1.25),
+                    x = args.x + (i * bg_width),
+                    y = args.y + (j * bg_height),
 
                     skin = args.bg,
                 };

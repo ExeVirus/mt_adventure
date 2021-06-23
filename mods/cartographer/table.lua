@@ -248,43 +248,43 @@ function fs.materials(x, y, meta, skin)
         y = y,
 
         gui.bg9 {
-            x = 0,
-            y = 0.125,
-
-            w = TABLE_WIDTH/10,
-            h = TABLE_HEIGHT/20,
-
-            skin = skin.label,
-        },
-        gui.image {
-            x = 0.125,
-            y = 0.125,
+            x = TABLE_WIDTH/80,
+            y = TABLE_HEIGHT/80,
 
             w = TABLE_WIDTH/20,
             h = TABLE_HEIGHT/20,
 
+            skin = skin.label,
+        },
+        gui.image {
+            x = TABLE_WIDTH/80,
+            y = TABLE_HEIGHT/80,
+
+            w = TABLE_WIDTH/20,
+            h = TABLE_WIDTH/20,
+
             image = skin.paper_texture .. ".png",
         },
         gui.label {
-            x = TABLE_WIDTH/13.33,
+            x = TABLE_WIDTH/80+TABLE_WIDTH/20,
             y = TABLE_HEIGHT/20,
 
             textcolor = skin.label.font_color,
-            text = string.format("x %d", meta:get_int("paper")),
+            text = string.format("x%d", meta:get_int("paper")),
         },
 
         gui.bg9 {
-            x = 0.25 + TABLE_WIDTH/4,
-            y = 0.125,
+            x = TABLE_WIDTH/8,
+            y = TABLE_HEIGHT/80,
 
-            w = TABLE_WIDTH/4,
-            h = TABLE_HEIGHT/20,
+            w = TABLE_WIDTH/20,
+            h = TABLE_WIDTH/20,
 
             skin = skin.label,
         },
         gui.image {
-            x = 0.375+TABLE_WIDTH/4,
-            y = 0.125,
+            x = TABLE_WIDTH/8,
+            y = TABLE_WIDTH/80,
 
             w = TABLE_WIDTH/20,
             h = TABLE_WIDTH/20,
@@ -292,11 +292,11 @@ function fs.materials(x, y, meta, skin)
             image = skin.pigment_texture .. ".png",
         },
         gui.label {
-            x = 0.625 + TABLE_WIDTH/8,
+            x = TABLE_WIDTH/8+TABLE_WIDTH/20,
             y = TABLE_WIDTH/20,
 
             textcolor = skin.label.font_color,
-            text = string.format("x %d", meta:get_int("pigment")),
+            text = string.format("x%d", meta:get_int("pigment")),
         },
     };
 end
@@ -314,8 +314,8 @@ function fs.cost(x, y, cost, skin)
     local data = {
         gui.bg9 {
             x = x,
-            y = y - 0.125,
-            w = TABLE_WIDTH/4,
+            y = y,
+            w = TABLE_WIDTH/40*5,
             h = TABLE_HEIGHT/10,
 
             skin = skin.label,
@@ -332,8 +332,8 @@ function fs.cost(x, y, cost, skin)
         end
 
         table.insert(data, gui.image {
-            x = x + 0.125,
-            y = y + (i * TABLE_HEIGHT/20) - 0.125,
+            x = x,
+            y = y + (i * TABLE_HEIGHT/20),
             w = TABLE_WIDTH/20,
             h = TABLE_HEIGHT/20,
 
@@ -341,8 +341,8 @@ function fs.cost(x, y, cost, skin)
         });
 
         table.insert(data, gui.label {
-            x = x + 0.375,
-            y = y + (i * TABLE_HEIGHT/20),
+            x = x + TABLE_WIDTH/20,
+            y = y + (i * TABLE_HEIGHT/80*3)+TABLE_HEIGHT/80*3,
             w = TABLE_WIDTH/20,
             h = TABLE_HEIGHT/20,
 
@@ -375,8 +375,8 @@ function fs.convert(x, y, pos, skin)
         gui.inventory {
             x = 0,
             y = 0,
-            w = 1,
-            h = 1,
+            w = TABLE_WIDTH/10+TABLE_WIDTH/80,
+            h = TABLE_WIDTH/10+TABLE_WIDTH/80,
 
             location = string.format("nodemeta:%d,%d,%d", pos.x, pos.y, pos.z),
             id = "input",
@@ -385,17 +385,17 @@ function fs.convert(x, y, pos, skin)
         },
 
         gui.button {
-            x = 2.5,
-            y = 0.25,
-            w = 2,
-            h = 0.5,
+            x = TABLE_WIDTH/4,
+            y = 0,
+            w = 3.5,
+            h = 1,
 
             id = "convert",
-            text = "Convert Materials",
+            text = "Insert Materials",
             disabled = value.paper + value.pigment <= 0,
         },
 
-        fs.cost(1.25, 0.375, value, skin),
+        fs.cost(TABLE_WIDTH/8, 0, value, skin),
     };
 end
 
@@ -431,15 +431,15 @@ function fs.craft(x, y, pos, rank, meta, skin)
         },
         gui.button {
             x = TABLE_WIDTH/4,
-            y = TABLE_HEIGHT/8,
-            w = TABLE_WIDTH/4,
+            y = TABLE_HEIGHT/10,
+            w = TABLE_WIDTH/3,
             h = TABLE_HEIGHT/10,
 
             id = "craft",
             text = stack:get_name() == "cartographer:map" and "Upgrade Map" or "Craft Map",
             disabled = not (is_positive and can_afford(cost, meta)),
         },
-        fs.cost(TABLE_WIDTH/8, TABLE_HEIGHT/8+0.1, cost, skin),
+        fs.cost(TABLE_WIDTH/8, TABLE_HEIGHT/10, cost, skin),
 
         gui.style {
             selector = string.format("%dx,%d", meta:get_int("scale"), meta:get_int("detail") + 1),
@@ -451,7 +451,7 @@ function fs.craft(x, y, pos, rank, meta, skin)
         },
         gui.label {
             x = 0,
-            y = 0,
+            y = TABLE_HEIGHT/80,
 
             text = "Detail Level",
             textcolor = skin.label.font_color,
@@ -459,20 +459,27 @@ function fs.craft(x, y, pos, rank, meta, skin)
     };
 
     if rank > 1 then
+        table.insert(data, gui.label {
+            x = 3,
+            y = TABLE_HEIGHT/80,
+
+            text = "Zoom Out Level",
+            textcolor = skin.label.font_color,
+        });
         table.insert(data, gui.button {
-            x = TABLE_WIDTH/4,
-            y = TABLE_HEIGHT/20,
-            w = TABLE_WIDTH/20,
-            h = TABLE_HEIGHT/20,
+            x = 3,
+            y = TABLE_HEIGHT/40,
+            w = 0.7,
+            h = 0.7,
 
             id = "1x",
             text = "1x",
         });
         table.insert(data, gui.button {
-            x = TABLE_WIDTH/4+0.5,
-            y = TABLE_HEIGHT/20,
-            w = TABLE_WIDTH/20,
-            h = TABLE_HEIGHT/20,
+            x = 3.7,
+            y = TABLE_HEIGHT/40,
+            w = 0.7,
+            h = 0.7,
 
             id = "2x",
             text = "2x",
@@ -480,19 +487,19 @@ function fs.craft(x, y, pos, rank, meta, skin)
 
         if rank > 2 then
             table.insert(data, gui.button {
-                x = TABLE_WIDTH/4+1,
-                y = TABLE_HEIGHT/20,
-                w = TABLE_WIDTH/20,
-                h = TABLE_HEIGHT/20,
+                x = 4.4,
+                y = TABLE_HEIGHT/40,
+                w = 0.7,
+                h = 0.7,
 
                 id = "4x",
                 text = "4x",
             });
             table.insert(data, gui.button {
-                x = TABLE_WIDTH+1.5,
-                y = TABLE_HEIGHT/20,
-                w = TABLE_WIDTH/20,
-                h = TABLE_HEIGHT/20,
+                x = 5.1,
+                y = TABLE_HEIGHT/40,
+                w = 0.7,
+                h = 0.7,
 
                 id = "8x",
                 text = "8x",
@@ -502,38 +509,38 @@ function fs.craft(x, y, pos, rank, meta, skin)
 
     table.insert(data, gui.button {
         x = 0,
-        y = TABLE_HEIGHT/20,
-        w = TABLE_WIDTH/20,
-        h = TABLE_HEIGHT/20,
+        y = TABLE_HEIGHT/40,
+        w = 0.7,
+        h = 0.7,
 
         id = "1",
         text = "1",
     });
     table.insert(data, gui.button {
-        x = TABLE_WIDTH/20,
-        y = TABLE_HEIGHT/20,
-        w = TABLE_WIDTH/20,
-        h = TABLE_HEIGHT/20,
+        x = 0.7,
+        y = TABLE_HEIGHT/40,
+        w = 0.7,
+        h = 0.7,
 
         id = "2",
         text = "2",
     });
     if rank > 1 then
         table.insert(data, gui.button {
-            x = TABLE_WIDTH/8,
-            y = TABLE_HEIGHT/20,
-            w = TABLE_WIDTH/20,
-            h = TABLE_HEIGHT/20,
+            x = 1.4,
+            y = TABLE_HEIGHT/40,
+            w = 0.7,
+            h = 0.7,
 
             id = "3",
             text = "3",
         });
         if rank > 2 then
             table.insert(data, gui.button {
-                x = TABLE_WIDTH/8+TABLE_WIDTH/20,
-                y = TABLE_HEIGHT/20,
-                w = TABLE_WIDTH/20,
-                h = TABLE_HEIGHT/20,
+                x = 2.1,
+                y = TABLE_HEIGHT/40,
+                w = 0.7,
+                h = 0.7,
 
                 id = "4",
                 text = "4",
@@ -567,30 +574,32 @@ function fs.copy(x, y, pos, skin)
             h = TABLE_HEIGHT/10,
 
             location = string.format("nodemeta:%d,%d,%d", pos.x, pos.y, pos.z),
+            tooltip = "Place map to be copied here",
             id = "copy_input",
             bg = skin.slot,
         },
         gui.inventory {
-            x = 8.75,
+            x = TABLE_WIDTH/2,
             y = 0,
             w = TABLE_WIDTH/10,
             h = TABLE_HEIGHT/10,
 
             location = string.format("nodemeta:%d,%d,%d", pos.x, pos.y, pos.z),
+            tooltip = "Copied map will appear here",
             id = "copy_output",
             bg = skin.slot,
         },
         gui.button {
             x = TABLE_WIDTH/4,
-            y = TABLE_HEIGHT/20,
-            w = TABLE_WIDTH/5,
-            h = TABLE_HEIGHT/20,
+            y = 0,
+            w = TABLE_WIDTH/4,
+            h = TABLE_HEIGHT/10,
 
             id = "copy",
             text = "Copy Map",
             disabled = not can_afford(costs, meta),
         },
-        fs.cost(TABLE_WIDTH/8, TABLE_HEIGHT/20, costs, skin),
+        fs.cost(TABLE_WIDTH/8, 0, costs, skin),
     };
 end
 
@@ -602,7 +611,8 @@ end
 --
 -- Returns a formspec string
 function fs.inv(x, y, skin)
-    return gui.inventory {
+    local styling = "style_type[list;size="..TABLE_WIDTH/10 ..";spacing=".. TABLE_WIDTH/80 .."]";
+    local inventory = gui.inventory {
         x = x,
         y = y,
         w = 8,
@@ -611,7 +621,10 @@ function fs.inv(x, y, skin)
         location = "current_player",
         id = "main",
         bg = skin.slot,
+		bgw = TABLE_WIDTH/10+TABLE_WIDTH/80,
+		bgh = TABLE_HEIGHT/10+TABLE_WIDTH/80,
     };
+	return styling..inventory
 end
 
 local player_tables = {};
@@ -646,27 +659,21 @@ local function table_formspec(player)
         minetest.show_formspec(player, "cartographer:table",
             fs.header(TABLE_WIDTH, TABLE_HEIGHT, rank, data.tab, skin) ..
             fs.materials(TABLE_WIDTH/20, TABLE_HEIGHT/20, meta, skin) ..
-            fs.separator(TABLE_WIDTH/16, skin.separator) ..
-            fs.convert(TABLE_WIDTH/20, TABLE_HEIGHT/12, pos, skin) ..
-            fs.separator(TABLE_WIDTH/4+0.125, skin.separator) ..
+            fs.convert(TABLE_WIDTH/20, TABLE_HEIGHT/8, pos, skin) ..
             fs.inv(TABLE_WIDTH/20, TABLE_HEIGHT/4+0.375, skin)
             );
     elseif data.tab == 2 then
         minetest.show_formspec(player, "cartographer:table",
-            fs.header(TABLE_WIDTH, TABLE_HEIGHT*11/10, rank, data.tab, skin) ..
+            fs.header(TABLE_WIDTH, TABLE_HEIGHT + TABLE_HEIGHT/20, rank, data.tab, skin) ..
             fs.materials(TABLE_WIDTH/20, TABLE_HEIGHT/20, meta, skin) ..
-            fs.separator(TABLE_WIDTH/16, skin.separator) ..
-            fs.craft(TABLE_WIDTH/20, TABLE_HEIGHT/12, pos, rank, meta, skin) ..
-            fs.separator(TABLE_WIDTH/4+0.5, skin.separator) ..
-            fs.inv(TABLE_WIDTH/20, TABLE_HEIGHT/4+0.75, skin)
+            fs.craft(TABLE_WIDTH/20, TABLE_HEIGHT/8, pos, rank, meta, skin) ..
+            fs.inv(TABLE_WIDTH/20, TABLE_HEIGHT/4+TABLE_HEIGHT/8, skin)
             );
     elseif data.tab == 3 then
         minetest.show_formspec(player, "cartographer:table",
             fs.header(TABLE_WIDTH, TABLE_HEIGHT, rank, data.tab, skin) ..
             fs.materials(TABLE_WIDTH/20, TABLE_HEIGHT/20, meta, skin) ..
-            fs.separator(TABLE_WIDTH/16, skin.separator) ..
-            fs.copy(TABLE_WIDTH/20, TABLE_HEIGHT/12, pos, skin) ..
-            fs.separator(TABLE_WIDTH/4+0.125, skin.separator) ..
+            fs.copy(TABLE_WIDTH/20, TABLE_HEIGHT/8, pos, skin) ..
             fs.inv(TABLE_WIDTH/20, TABLE_HEIGHT/4+0.375, skin)
             );
     end
