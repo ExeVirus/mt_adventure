@@ -1,0 +1,13 @@
+Cartography-Tables
+-----------------
+There are three cartography tables, each providing more features than the last.
+To make maps, you right click a table, and provide paper and black dye to the
+"insert materials" tab. Once inserted, you can use the materials for making maps 
+in the next tab. Maps can be upgraded, as well as copied. Higher detail maps and large zoom
+maps need more materials to generate. 
+|
+The (basic) table provides for basic maps, which are of low detail and washed coloring.
+|
+The standard table provides for Rank maps, which allow for different zoom levels and more coloration.
+|
+The Advanced table provides the most options for map making.

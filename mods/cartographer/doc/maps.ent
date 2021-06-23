@@ -1,0 +1,14 @@
+Cartography-Maps
+-----------------
+To use a blank map, right click while it is selected.
+Once used, a map will be tied to the area in which you right clicked.
+I.e. maps are tied to a location, and you will need more than one to map the world.
+|
+Once opened, a map will display terrain you have already explored, as well as your 
+current position, typically shown with a animated dark circle. 
+|
+You can toggle the height display option with the top right corner button
+|
+You can also place a single marker at your current location with the markers tab 
+on the right. This marker will remain there for the next time you open the map, 
+allowing you to create location guides, treasuremaps, detailed build plans,s etc.
