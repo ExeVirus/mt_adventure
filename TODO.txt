@@ -1,6 +1,29 @@
-a. Bosses: 
+a. Bosses/Mobs: 
     -KingSlime-https://www.blendswap.com/blend/26517
-    -
+    -Bosses are basically already done, just use dmobs, living nether, etc to generate them
+        - Requires reworking the mob spawn locations
+        - Mob drops must be adjusted to include their "special item" and some lore on
+          how to find the next "boss" in order
+    - All boss and mobs documentation should be done at once, mods include:
+        - dmobs
+        - mobs_redo
+        - living nether
+        - mobs_water
+        - seeker
+        - nyan cat should be removed...
+b. Bosses in some order:
+    1. Treeman
+        a. Found in deep jungle, a specific biome within jungles
+    2. Golem
+        a. Found in deserts, specific area
+    3. Ogre
+        a. Found in caverns, maybe near a certain ore
+    4. Orc "king" with orc buddies
+        a. Should appear in Savanna possibly
+    5. Wyvern/Dragons
+        b. Floatlands?
+    6. 
+   
 0. Biomes need fully documented
 01. Bosses or challenges need to be included
 02. Remove Nyan Cat... or make him less common, sheesh

@@ -4,6 +4,7 @@ caverealms = {} --create a container for functions and constants
 local modpath = minetest.get_modpath(minetest.get_current_modname())
 
 --load companion lua files
+dofile(modpath.."/documentation.lua") --configuration file; holds various constants
 dofile(modpath.."/config.lua") --configuration file; holds various constants
 dofile(modpath.."/crafting.lua") --crafting recipes
 dofile(modpath.."/nodes.lua") --node definitions

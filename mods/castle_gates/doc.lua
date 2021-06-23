@@ -32,14 +32,14 @@ castle_gates.doc.gate_slot_usagehelp = S("This block is designed to extend into 
 castle_gates.doc.gate_slot_reverse_longdesc = S("A block that extends into an adjacent node to provide a tight seal for a large gate.")
 castle_gates.doc.gate_slot_reverse_usagehelp = S("Two nodes cannot occupy the same space, but this block extends into a neighboring node's space to allow for gates to form a tight seal. It can be used with sliding gates or swinging gates.")
 
-doc.add_category("castle_gates",
+doc.add_category("_castle_gates_",
 {
-	name = S("Gates"),
+	name = S("_Gates_"),
 	description = S("Gates are large multi-node constructions that swing on hinges or slide out of the way when triggered."),
 	build_formspec = doc.entry_builders.text_and_gallery,
 })
 
-doc.add_entry("castle_gates", "construction", {
+doc.add_entry("_castle_gates_", "construction", {
 	name = S("Gate construction"),
 	data = { text =
 S("Gates are multi-node constructions, usually (though not always) consisting of multiple node types that fit together into a unified whole. The orientation of gate nodes is significant, so a screwdriver will be a helpful tool when constructing gates."
