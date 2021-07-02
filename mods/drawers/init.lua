@@ -28,6 +28,8 @@ SOFTWARE.
 local MP = core.get_modpath(core.get_current_modname())
 local S, NS = dofile(MP.."/intllib.lua")
 
+dofile(MP.."/documentation.lua")
+
 drawers = {}
 drawers.drawer_visuals = {}
 
