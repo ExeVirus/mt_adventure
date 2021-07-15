@@ -36,5 +36,6 @@ b. Bosses in some order:
 3. Fix algae to be useful in other ways, fix bonemeal to not generate them on dirt...
 4. Go through the default encyclopedia and make changes as needed
 5. Complete the documentation
-6. 
+6. Fix the broken smartFS. It's mediocre/bad....
+7. 
 
