@@ -1,0 +1,9 @@
+Basins
+-----------------
+Basins are meant to be used at the base of a waterfall.
+Place them beneath the water's surface, and particles
+will "bounce" up as if they hit rocks in the water.
+|
+To change the height, distance, amount, and direction
+of the particles, right-click the block to bring up 
+a formspec to edit these values.

@@ -1,0 +1,9 @@
+Waterfall Blocks
+-----------------
+These blocks are meant to be used at the top of a 
+waterfall (or any water drop spot). They produce 
+particles out the side of the block and have 
+adjustable direction, distance, amount, and fall height.
+|
+Merely right click the node to bring of the formspec 
+to edit these values.

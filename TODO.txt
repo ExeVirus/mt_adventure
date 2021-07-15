@@ -35,5 +35,6 @@ b. Bosses in some order:
 2. Compress all textures, 3d objects, etc.
 3. Fix algae to be useful in other ways, fix bonemeal to not generate them on dirt...
 4. Go through the default encyclopedia and make changes as needed
-5. 
+5. Complete the documentation
+6. 
 
