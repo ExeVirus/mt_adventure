@@ -37,5 +37,6 @@ b. Bosses in some order:
 4. Go through the default encyclopedia and make changes as needed
 5. Complete the documentation
 6. Fix the broken smartFS. It's mediocre/bad....
-7. 
+7. Document default mtg stuff
+8.
 

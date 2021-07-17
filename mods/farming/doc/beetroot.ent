@@ -1,0 +1,10 @@
+Beetroot
+-----------------
+Food value: 1
+Number of Stages: 5
+Yield: 1-4
+Seed Type: Itself
+Locations Found: On dirt_with_grass
+Crafts:
+- Can make red dye (1:1 ratio)
+- beetroot_soup, (5 + bowl)

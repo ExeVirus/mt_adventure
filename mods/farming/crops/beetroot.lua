@@ -66,7 +66,7 @@ minetest.register_node("farming:beetroot_3", table.copy(def))
 def.tiles = {"farming_beetroot_4.png"}
 minetest.register_node("farming:beetroot_4", table.copy(def))
 
--- stage 5
+-- stage 5 (final)
 def.tiles = {"farming_beetroot_5.png"}
 def.groups.growing = nil
 def.drop = {

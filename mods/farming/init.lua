@@ -18,6 +18,7 @@ farming = {
 	max_light = 15
 }
 
+dofile(farming.path.."/documentation.lua")
 
 local creative_mode_cache = minetest.settings:get_bool("creative_mode")
 

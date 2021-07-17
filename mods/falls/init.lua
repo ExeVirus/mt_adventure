@@ -1,5 +1,5 @@
 local settings = Settings(minetest.get_modpath('falls')..'/settings.txt')
-local MP 	= minetest.get_modpath(minetest.get_current_modname())
+local MP = minetest.get_modpath(minetest.get_current_modname())
 local S, NS = dofile(MP..'/intllib.lua')
 
 dofile(MP.."/documentation.lua")
