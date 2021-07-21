@@ -1,0 +1,10 @@
+Blueberries
+-----------------
+Food value: 1
+Number of Stages: 4
+Yield: 2-4
+Seed Type: Itself
+Locations Found: On dirt_with_grass
+Crafts:
+- Blueberry Muffin - food value 2
+- Blueberry Pie - food value 6
