@@ -1,0 +1,10 @@
+Carrot
+-----------------
+Food value: 4
+Number of Stages: 8
+Yield: 2-5
+Seed Type: Itself
+Locations Found: On dirt_with_grass by water
+Crafts:
+- carrot_juice - food value 4
+- carrot_gold - food value 10
