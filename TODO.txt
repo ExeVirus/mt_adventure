@@ -1,5 +1,4 @@
 0. Biomes need fully documented
-01. Bosses or challenges need to be included
 02. Remove Nyan Cat.
 1. Bell mod needs two sound files
 2. Compress all textures, 3d objects, etc.
@@ -8,15 +7,9 @@
 5. Complete the documentation
 6. Rip out SmartFS and replace with I3, then update I3 to include the documentation
 7. Document default mtg stuff
-8. Perhaps, but unlikely: add bosses
-    a. Bosses/Mobs: 
-        -KingSlime-https://www.blendswap.com/blend/26517
-        -Bosses are basically already done, just use dmobs, living nether, etc to generate them
-        - All boss and mobs documentation should be done at once, mods include:
-            - dmobs
-            - mobs_redo
-            - living nether
-            - mobs_water
-            - seeker
-            - nyan cat should be removed...
-        - Boss drops need to be improved or changed to allow cool/better equipment or tools
+8. Add Main Menu music
+9. Add in-game music
+10. Adjust Mob spawns if needed
+11. Add draconis
+12. Make some items dependent on Nether or Dragon kills (glider, etc.)
+13. Update License
