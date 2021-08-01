@@ -1,0 +1,10 @@
+Garlic
+-----------------
+Food value: 1
+Number of Stages: 5
+Yield: 3-5
+Seed Type: garlic_clove
+Locations Found: dirt_with_grass next to trees 
+Crafts:
+- garlic_clove (8 from one garlic)
+- garlic_braid (1 from 9 garlic)
