@@ -176,11 +176,3 @@ farming.registered_plants["farming:cotton"] = {
 	maxlight = farming.max_light,
 	steps = 8
 }
-
---[[ Cotton using api
-farming.register_plant("farming:cotton", {
-	description = "Cotton seed",
-	inventory_image = "farming_cotton_seed.png",
-	groups = {flammable = 2},
-	steps = 8,
-})]]
