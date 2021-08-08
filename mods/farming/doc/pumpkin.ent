@@ -1,0 +1,13 @@
+Pumpkin (slice)
+-----------------
+Food value: 2 (slice)
+Number of Stages: 8
+Yield: 1 pumpkin
+Seed Type: pumpkin slice
+Locations Found: dirt_with_grass
+Crafts:
+- 4 slices = 1 pumpkin
+- jackolantern
+- scarecrow_bottom
+- pumpkin_bread: Food Value = 8
+- pumpkin_dough (for pumpkin bread)

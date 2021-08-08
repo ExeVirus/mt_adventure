@@ -1,0 +1,9 @@
+Rhubarb
+-----------------
+Food value: 1
+Number of Stages: 3
+Yield: 2-4
+Seed Type: Itself
+Locations Found: dirt_with_grass
+Crafts:
+- rhubarb_pie: Food value = 6
