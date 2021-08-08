@@ -1,0 +1,11 @@
+Wheat
+-----------------
+Food value: N/A
+Number of Stages: 8
+Yield: 1-2 (1-2 seeds)
+Seed Type: wheat seed
+Locations Found: by digging normal grass
+Crafts:
+- farming_straw: Food value = N/A
+- flour: Food Value = N/A
+- bread: Food Value = 5
