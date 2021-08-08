@@ -1,0 +1,9 @@
+Mint (leaf)
+-----------------
+Food value: N/A
+Number of Stages: 8
+Yield: 2-4 leaves (1-3 seeds)
+Seed Type: mint seeds
+Locations Found: [dirt_with_grass or dirt_with_coniferous_litter] by water
+Crafts:
+- mint_tea: Food value = 2

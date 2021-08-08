@@ -1,0 +1,10 @@
+Melon (melon slice)
+-----------------
+Food value: 2
+Number of Stages: 8
+Yield: 1 large melon
+Seed Type: Melon Slice
+Locations Found: dirt_with_dry_grass or dirt_with_rainforest_litter
+Crafts:
+- 4 slices = 1 large melon (node)
+- 1 large melon + cutting board = 4 slices
