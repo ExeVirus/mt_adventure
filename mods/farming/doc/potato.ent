@@ -1,0 +1,10 @@
+Potato
+-----------------
+Food value: 1 (or chance of poison by 1)
+Number of Stages: 4
+Yield: 2-5
+Seed Type: Itself
+Locations Found: dirt_with_grass
+Crafts:
+- farming_baked_potato: Food value = 6
+- potato_salad: Food Value = 10

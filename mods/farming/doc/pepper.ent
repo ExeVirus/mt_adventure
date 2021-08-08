@@ -1,0 +1,9 @@
+Pepper (green, yellow, red)
+-----------------
+Food value: Green = 2, Yellow = 3, Red = 4
+Number of Stages: 5-green, 6-yellow, 7-red
+Yield: 2-4 peppers (all three colors)
+Seed Type: Pepper Corn (crafted from any pepper)
+Locations Found: dirt_with_rainforest_litter by trees
+Crafts:
+- pepper_ground: Food value = N/A

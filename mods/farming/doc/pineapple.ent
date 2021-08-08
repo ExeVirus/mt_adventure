@@ -1,0 +1,10 @@
+Pineapple (ring)
+-----------------
+Food value: Ring = 1
+Number of Stages: 8
+Yield: 1-2 Pineapples
+Seed Type: Pineapple top
+Locations Found: dirt_with_dry_grass or dry_dirt_with_dry_grass
+Crafts:
+- 5 Rings and 1 Pineapple Top from 1 pineapple
+- pineapple_juice: Food Value = 4
