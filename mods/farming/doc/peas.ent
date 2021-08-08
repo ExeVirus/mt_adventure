@@ -1,0 +1,10 @@
+Peas
+-----------------
+Food value: 1 (pea)
+Number of Stages: 5
+Yield: 2-4 Pea Pods
+Seed Type: Pea Pod
+Locations Found: dirt_with_grass
+Crafts:
+- pea_soup: Food value = 4
+- 1 Pea from 1 Pea Pod
