@@ -1,0 +1,13 @@
+Soy Pods/Beans
+-----------------
+Food value: 1 (bean)
+Number of Stages: 8
+Yield: 1-5 pods
+Seed Type: Soy Pod
+Locations Found: dirt_with_dry_grass or dirt_with_rainforest_litter, or dry_dirt_with_dry_grass
+Crafts:
+- 1 Pod = 1 Bean
+- soy_sauce: Food Value = N/A
+- soy_milk: Food Value = 2
+- tofu: Food Value = 3
+- cooked tofu: Food Value = 6

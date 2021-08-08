@@ -1,0 +1,9 @@
+Tomato
+-----------------
+Food value: 4
+Number of Stages: 8
+Yield: 3-6
+Seed Type: Itself
+Locations Found: dirt_with_grass
+Crafts:
+- tomato_soup: Food value = 8

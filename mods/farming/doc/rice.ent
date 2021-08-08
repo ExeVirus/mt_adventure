@@ -1,0 +1,10 @@
+Rice
+-----------------
+Food value: N/A
+Number of Stages: 8
+Yield: 1+
+Seed Type: rice seed
+Locations Found: by digging jungle grass
+Crafts:
+- rice_bread: Food value = 5
+- rice_flour: Food value = N/A
