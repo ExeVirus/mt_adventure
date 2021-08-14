@@ -1,4 +1,5 @@
 -- fire/init.lua
+dofile(minetest.get_modpath(minetest.get_current_modname()).."/documentation.lua")
 
 -- Global namespace for functions
 fire = {}
