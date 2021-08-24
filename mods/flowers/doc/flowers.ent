@@ -1,0 +1,26 @@
+Flowers
+-----------------
+Flowers are decorations found throughout the world, typically in 
+grassy biomes. They can be used for making dyes, and for other useful
+recipes. 
+
+Flora will naturally spread to fill available nearby soil, but only if there are not too many 
+plants in the area already. This limit is roughly 7 flora per 9x9 area. Normal flowers need 13 light
+to grow, and take a while to trigger (sometimes a full game-day). This makes them hard but not impossible
+to farm and propogate.
+
+The following is the list of the different plants and where they are found:
+
+Flower         |    Location
+---------------|---------------
+Rose           | grassland, deciduous_forest
+Tulip          | grassland, deciduous_forest
+Dandelion_Y    | grassland, deciduous_forest
+Chrysanthemum  | grassland, deciduous_forest
+Geranium       | grassland, deciduous_forest
+Viola          | grassland, deciduous_forest
+Dandelion_W    | grassland, deciduous_forest
+Tulip_Black    | grassland, deciduous_forest
+Mushroom_red   | deciduous_forest, coniferous_forest
+Mushroom_brown | deciduous_forest, coniferous_forest
+Waterlily      | rainforest_swamp, savanna_shore, deciduous_forest_shore

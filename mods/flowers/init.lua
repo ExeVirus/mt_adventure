@@ -1,8 +1,7 @@
 -- flowers/init.lua
+dofile(minetest.get_modpath(minetest.get_current_modname()).."/documentation.lua")
 
--- Minetest 0.4 mod: default
 -- See README.txt for licensing and other information.
-
 
 -- Namespace for functions
 

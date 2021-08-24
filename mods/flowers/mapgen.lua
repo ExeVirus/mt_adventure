@@ -100,7 +100,7 @@ local function register_flower(seed, flower_name)
 			octaves = 3,
 			persist = 0.6
 		},
-		biomes = {"grassland", "deciduous_forest"},
+		-- biomes = {"grassland", "deciduous_forest"},
 		y_max = 31000,
 		y_min = 1,
 		decoration = "flowers:"..flower_name,
