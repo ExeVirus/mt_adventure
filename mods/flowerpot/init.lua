@@ -10,6 +10,8 @@
 
 --]]
 
+dofile(minetest.get_modpath(minetest.get_current_modname()).."/documentation.lua")
+
 flowerpot = {}
 
 -- Translation
