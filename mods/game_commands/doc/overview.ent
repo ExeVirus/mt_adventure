@@ -1,0 +1,46 @@
+In-Game Commands
+-----------------
+Minetest chat is easily found by hitting the 't' button to
+bring up the chat dialog. There you will see recent chat and other 
+messages, and you can type your own. By default, if you have the "shout" 
+priviledge (see Privilidges), you can send a chat message to everyone in the
+server. If you want to use a name of a player in the server you can start typing 
+the beginning and then hit {tab} to autocomplete. So for hte player 'Jackson' you only 
+need to type "Jac" and hit {tab} to get: 'Jackson'
+
+There are also in-game commands most players can execute, and these always start with
+'/'. The command for respawning is '/killme' for example. Help can always be gotten with
+99% of commands by typing 'help' which brings up a nice form for you to read through and 
+understand. The list below are the built-in commands:
+
+/killme             : kills you (takes armor typically) and respawns you at your spawnpoint
+/list_players       : Shows you the current player list
+/disconnect         : Exit to the main menu
+/clear_chat_queue   : rid yourself of all messages in your chat
+/me                 : Talk about yourself in third person.
+/admin              : Get the admin's name if they have it set in the world config
+/privs              : View you or other's priviledges
+/haspriv            : View who has the named priviledge
+/grant or /grantme  : Give someone or yourself privs. NOTE: must be allowed to, such as a server owner
+/revoke             : Remove a player's priviledges
+/revokeme           : Remove your own privs
+/setpassword        : Server owner can change player's passwords
+/clearpassword      : Server owner can set a player's password to "empty"
+/teleport           : Teleport you or someone else to a position or to a specific player (priv needed)
+/give or /giveme    : Give a player or yourself any item of any amount of that item
+/spawnentity        : More for server owners or developers, spawn an entity at a location.
+/pulverize          : Destroy any held item
+/rollback           : an imperfect, but decent attempt at un-doing a player's recent changes to the world
+/status             : Show server status
+/time               : Show or set (priv) the time of day
+/days               : Show number of days since server creation
+/shutdown           : Shutdown the server now or soon (seconds) with an optional message to all players
+/ban                : Ban a player by IP
+/unban              : undo
+/kick               : Make player disconnect from the server
+/clearobjects       : Will remove all entities (such as animals or floating items)
+/msg                : Send private message to a player (admins can still see them)
+/last-login         : Last login time of a given player
+/clearinv           : Clear your entire inventory (inventory named "main")
+/kill               : Kill another player or yourself (like /killme)
+
