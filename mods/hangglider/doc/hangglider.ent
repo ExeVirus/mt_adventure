@@ -1,0 +1,12 @@
+Hang Glider
+-----------------
+Hang Gliders are some of the funnest tools in the game!
+You hold it in hand, and after jumping left click to begin
+flying. It does wear out, so keep that in mind:)
+
+Note: protected areas can have "flak" set to on, which will shoot
+you out of the sky over that players protected area! So don't get
+too crazy out there...
+
+To turn on flak, use: /area_flak [id] 
+id = area ID.

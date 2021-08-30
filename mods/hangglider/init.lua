@@ -2,6 +2,8 @@
 -- Original code by Piezo_ (orderofthefourthwall@gmail.com)
 -- 2018-11-14
 
+dofile(minetest.get_modpath(minetest.get_current_modname()).."/documentation.lua")
+
 -- Modifications by David G (kestral246@gmail.com)
 -- 2018-11-24
 -- For Minetest 5.x, glider's set_attach needs to be offset by 1 node
