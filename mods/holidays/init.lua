@@ -3,6 +3,8 @@ holidays = {}
 holidays.modname = minetest.get_current_modname()
 holidays.modpath = minetest.get_modpath(holidays.modname)
 
+dofile(holidays.modpath).."/documentation.lua")
+
 function holidays.log(level, message, ...)
     return minetest.log(level, ("[%s] %s"):format(holidays.modname, message:format(...)))
 end
@@ -39,14 +41,15 @@ local function or_(...)
     end
 end
 
+
+-----Holiday Updates
 holidays.schedule = {
-    christmas = date_range_predicate({month=12, day=24}, {month=12, day=26}),  -- 2019 date
-    easter = date_range_predicate({month=4, day=8}, {month=4, day=13}),  -- 2020 date
+    christmas = date_range_predicate({month=12, day=24}, {month=12, day=26}),
+    easter = date_range_predicate({month=4, day=14}, {month=4, day=20}),  -- 2022 date
     fireworks = or_(
             date_range_predicate({month=7, day=2}, {month=7, day=5}), -- july 4th
             date_range_predicate({month=12, day=31}, {month=1, day=1})  -- new years
     ),
-    winter = date_range_predicate({month=12, day=21}, {month=1, day=1}),
 }
 
 function holidays.is_holiday_active(holiday_name)
@@ -59,4 +62,3 @@ end
 dofile(holidays.modpath .. "/christmas.lua")
 dofile(holidays.modpath .. "/easter.lua")
 dofile(holidays.modpath .. "/fireworks.lua")
-dofile(holidays.modpath .. "/winter.lua")

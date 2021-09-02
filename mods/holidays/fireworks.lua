@@ -173,7 +173,6 @@ if holidays.is_holiday_active("fireworks") then
             {"holidays:fireworks","holidays:fireworks","holidays:fireworks"}
         },
     })
-
 else
     -- remove fireworks after July 4th
     minetest.register_lbm({

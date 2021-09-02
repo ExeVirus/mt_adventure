@@ -72,6 +72,7 @@ minetest.register_node('holidays:easter_egg', {
 	end,
 })
 
+local randomNumber = PcgRandom(2234789)
 
 if not holidays.is_holiday_active("easter") then
     -- remove easter eggs after easter
@@ -80,5 +81,17 @@ if not holidays.is_holiday_active("easter") then
         nodenames = {'holidays:easter_egg'},
         run_at_every_load = true,
         action = minetest.remove_node
+    })
+else
+    minetest.register_lbm({
+        name = 'holidays:add_easter',
+        nodenames = {'default:dirt_with_grass'},
+        run_at_every_load = true,
+        action = function(pos, node) 
+            pos.y = pos.y+1
+            if(minetest.get_node(pos).name == 'air' && randomNumber:next() < -2100000) then --roughly a 1 in 1000 chance of appearing with each reload
+                minetest.add_node(pos,{name='holidays:easter_egg', param1=0, param2=0} -- Which is roughly 1 every 4 mapblocks. Plenty.
+            end
+        end,
     })
 end
