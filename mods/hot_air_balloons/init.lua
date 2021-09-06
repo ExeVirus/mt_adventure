@@ -8,6 +8,7 @@ local get_node = minetest.get_node
 local add_entity = minetest.add_entity
 
 local modpath = minetest.get_modpath("hot_air_balloons")
+dofile(modpath.."/documentation.lua")
 local set_rescue, mark_for_deletion_if_piloted = dofile(modpath .. "/absent_ballooner_rescuing.lua")
 local handle_movement = dofile(modpath .. "/movement.lua")
 

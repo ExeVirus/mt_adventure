@@ -89,8 +89,8 @@ else
         run_at_every_load = true,
         action = function(pos, node) 
             pos.y = pos.y+1
-            if(minetest.get_node(pos).name == 'air' && randomNumber:next() < -2100000) then --roughly a 1 in 1000 chance of appearing with each reload
-                minetest.add_node(pos,{name='holidays:easter_egg', param1=0, param2=0} -- Which is roughly 1 every 4 mapblocks. Plenty.
+            if(minetest.get_node(pos).name == 'air' and randomNumber:next() < -2100000) then --roughly a 1 in 1000 chance of appearing with each reload
+                minetest.add_node(pos,{name='holidays:easter_egg', param1=0, param2=0}) -- Which is roughly 1 every 4 mapblocks. Plenty.
             end
         end,
     })

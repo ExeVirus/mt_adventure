@@ -3,7 +3,7 @@ holidays = {}
 holidays.modname = minetest.get_current_modname()
 holidays.modpath = minetest.get_modpath(holidays.modname)
 
-dofile(holidays.modpath).."/documentation.lua")
+dofile(holidays.modpath.."/documentation.lua")
 
 function holidays.log(level, message, ...)
     return minetest.log(level, ("[%s] %s"):format(holidays.modname, message:format(...)))

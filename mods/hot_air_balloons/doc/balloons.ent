@@ -1,0 +1,10 @@
+Hot Air Balloons
+-----------------
+This mod adds craftable and ridable hot air balloons.
+
+Controls:
+    right click with fuel(like coal) item: increase heat and buoyancy (*)
+    right click without fuel (coal is a fuel): enter or leave balloon
+    left, right, up, down (default WASD): accelerate the balloon
+    sneak (default shift): decrease heat, lowering buoyancy
+    jump (default space): turn the balloon towards where the player is looking

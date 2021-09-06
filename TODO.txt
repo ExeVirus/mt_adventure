@@ -12,5 +12,6 @@
 10. Adjust Mob spawns if needed
 11. Add draconis
 12. Make some items dependent on Nether or Dragon kills (glider, etc.)
-13. Update License
+13. Update Licenses
 14. Update Screenshot and main menu
+15. Hot air Balloon fire particle needs to have the current balloon velocity, rather than still
