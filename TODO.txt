@@ -15,3 +15,7 @@
 13. Update Licenses
 14. Update Screenshot and main menu
 15. Hot air Balloon fire particle needs to have the current balloon velocity, rather than still
+16. Update i3 with doc_helper tab
+17. Mob documentation: living nether, dmobs, default?
+18. Mesecons Documentation
+19. Make the maps rename-able
