@@ -1,0 +1,27 @@
+LuaController
+-----------------
+The Luacontroller is an advanced programmable component.
+You can simply code it in the language Mesecons uses itself: 
+    Lua! 
+
+All the code runs in a sandbox, so it's completely safe 
+(but I won't guarantee that for absolute certainty!). 
+It works fine in an unloaded block, 
+loading the block when the program needs to run. 
+
+Events are properly delivered after a server restart.
+
+Further Documentation:
+http://mesecons.net/luacontroller/
+
+Short programming reference:
+----------------------------
+ports = get_real_port_states(pos): gets if inputs are powered from outside
+newport = merge_port_states(state1, state2): just does result = state1 or state2 for every port
+set_port(pos, rule, state): activates/deactivates the mesecons according to the port states
+set_port_states(pos, ports): Applies new port states to a Luacontroller at pos
+run_inner(pos, code, event): runs code on the controller at pos and event
+reset_formspec(pos, code, errmsg): installs new code and prints error messages, without resetting LCID
+reset_meta(pos, code, errmsg): performs a software-reset, installs new code and prints error message
+run(pos, event): a wrapper for run_inner which gets code & handles errors via reset_meta
+resetn(pos): performs a hardware reset, turns off all ports

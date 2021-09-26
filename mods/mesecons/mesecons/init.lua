@@ -44,6 +44,9 @@ mesecon={} -- contains all functions and all global variables
 mesecon.queue={} -- contains the ActionQueue
 mesecon.queue.funcs={} -- contains all ActionQueue functions
 
+-- Documentation
+dofile(minetest.get_modpath("mesecons").."/documentation.lua")
+
 -- Settings
 dofile(minetest.get_modpath("mesecons").."/settings.lua")
 

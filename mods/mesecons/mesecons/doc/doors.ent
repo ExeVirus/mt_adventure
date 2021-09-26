@@ -1,0 +1,6 @@
+Mesecons Doors
+-----------------
+Mesecons overrides the default doors so they can be controlled
+via mesecon signals, such as switches, levers, etc. 
+
+Simple, and fun!

@@ -1,0 +1,25 @@
+Mesecons (Messy-Cons)
+-----------------
+Most Info taken from: https://mesecons.net/
+Go there if you have a browser, use this for in-game
+lookup info.
+
+
+What is Mesecons?
+
+Machines, Switches, Electronics, Sounds, Programs!
+
+Mesecones puts the world at your control, moving objects,
+opening doors, detecting monsters, making computers, etc.
+
+Things that create mesecon signals are receptors, and Things
+that respond to signals are effectors. Some such as microcontrollers
+are combinations of the two. 
+
+The documentation elsewhere here in-game just coveres specific items.
+For understanding how to put them together, I reccomend the 
+link above and go from there, this is not the end-all technical 
+mod for minetest, and is included in this adventure-like game
+to spice up your world as you see fit. This is not a nuclear power
+plant or anything, feel free to add mods like techage, techpack,
+digilines, technic, you get the idea:)

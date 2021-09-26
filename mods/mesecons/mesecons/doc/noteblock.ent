@@ -1,0 +1,19 @@
+Noteblock
+-------------
+This effector makes a sound if powered and can be used 
+for making music. Normally it makes piano sounds. 
+The sound frequency can be changed by punching the block 
+(only works for piano). 
+
+There are some special sounds that depend 
+on the block below:
+
+Glass or Obsidian Glass: Hi-hat
+Any stone: Kick
+Chest or Locked Chest: Snare
+Any tree: Crash
+Any wooden planks: Lite Crash
+Coal Block: Explosion sound
+Lava Source: Fire sound
+Steel Block: Piano (high pitch, one octave higher than normal)
+Any Other Block: Piano (low pitch)

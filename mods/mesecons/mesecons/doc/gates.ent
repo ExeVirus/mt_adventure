@@ -1,0 +1,46 @@
+Logic Gates
+-----------------
+There are 7 different gates in mesecons, each do a 
+logic operation to the signal(s) received. 
+
+They all work in unloaded blocks.
+
+AND
+------
+AND gates power their output if both inputs 
+(from left and right) are powered.
+
+
+Diode
+-----
+Diodes conduct signals in one direction only.
+
+NAND
+-----
+NAND gates do not power their output if both inputs 
+(from left and right) are powered, 
+but power it in every other case.
+
+NOR
+-----
+NOR gates only power their output if none of their two 
+inputs is powered. They are basically OR gates with a 
+NOT gate at their output.
+
+NOT
+----
+NOT gates invert signals, just like a mesecon torch does, 
+but faster. The input is at the opposite side of the output.
+
+OR
+-----
+OR gates power their output if either of their inputs 
+(or both) are powered. You could basically get the same 
+behaviour with two diodes, but OR gates save some space.
+
+XOR
+-----
+XOR gates power their output if only one input is powered, 
+they're off if either both or none of the inputs is powered.
+
+

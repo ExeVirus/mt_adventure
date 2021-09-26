@@ -1,0 +1,10 @@
+Sticky Blocks
+-----------------
+Sticky blocks can be used together with pistons 
+or movestones to push / pull Structures that are 
+"glued" together using sticky blocks.
+
+These only respond to movestone or piston actions, and 
+are not affected or create mesecon signals.
+
+Remember the 20 block rule often still applies to pistons.

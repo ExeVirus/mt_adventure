@@ -1,0 +1,12 @@
+Remove Stone
+-----------------
+Removestones are probably the simplest effectors possible. 
+They simply disappear when powered. 
+They work in inactive blocks. 
+
+Ghost Stone
+-----------------
+Ghoststones disappear when powered, just like Removestones.
+But in contrast to Removestones, they reappear again when 
+not powered anymore and they are also conductive.
+They work in inactive blocks. 

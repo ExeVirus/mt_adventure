@@ -1,0 +1,24 @@
+Microcontroller
+-----------------
+Not great documentation avaiable, 
+but a single microcontroller allows four inputs:
+
+A,B,C,D
+
+And you apply standard binary operations on them:
+
+XOR, NOT, AND, etc.
+
+You can for example make B always the opposite of A:
+
+sbi(B, !A)
+"do(Output B 'equals' NOT A)"
+
+sbi() is the syntax for Do() in this case,
+and you can do multiple sbi()s in a single microcontroller:
+
+sbi(B,!A)sbi(D,!C)
+
+The above will make B opposite of A and D opposite of component.
+And so on, just don't mix inputs and outputs, I'm sure that'll make for
+some great bugs....

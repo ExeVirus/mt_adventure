@@ -1,0 +1,9 @@
+Wires
+-----------------
+Mesecons are the wires, use them to connect effectors with receptors.
+Wiring works through unloaded blocks; they’re loaded when the signal level changes.
+
+Basic wire will essentially connect in all directions.
+If you want to only have the wire connect in directions you specify,
+then you should use insulated wire. To change the connections, you can rotate them
+with a screwdriver (like almost everything else in the game)
