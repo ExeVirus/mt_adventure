@@ -35,6 +35,7 @@ if minetest.get_modpath("nether") then
    ropes.can_extend_into_nodes["nether:fumes"] = true
 end
 
+dofile( MP .. "/documentation.lua")
 dofile( MP .. "/doc.lua" )
 dofile( MP .. "/functions.lua" )
 dofile( MP .. "/crafts.lua" )

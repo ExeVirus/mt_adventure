@@ -55,10 +55,11 @@ nether.fogColor = {	           -- only used if climate_api is installed
 	geodes        = "#300530"  -- Distance-fog colour for secondary region
 }
 
+dofile(nether.path .. "/documentation.lua")
 
 -- Settings
-nether.DEPTH_CEILING              =  -5000 -- The y location of the Nether's celing
-nether.DEPTH_FLOOR                = -11000 -- The y location of the Nether's floor
+nether.DEPTH_CEILING              = -16000 -- The y location of the Nether's celing
+nether.DEPTH_FLOOR                = -32000 -- The y location of the Nether's floor
 nether.FASTTRAVEL_FACTOR          =      8 -- 10 could be better value for Minetest, since there's no sprint, but ex-Minecraft players will be mathing for 8
 nether.PORTAL_BOOK_LOOT_WEIGHTING =    0.9 -- Likelyhood of finding the Book of Portals (guide) in dungeon chests. Set to 0 to disable.
 nether.NETHER_REALM_ENABLED       =   true -- Setting to false disables the Nether and Nether portal
@@ -72,7 +73,7 @@ nether.DEPTH_CEILING              = tonumber(minetest.settings:get("nether_depth
 nether.DEPTH_FLOOR                = tonumber(minetest.settings:get("nether_depth_ymin") or nether.DEPTH_FLOOR)
 
 if nether.DEPTH_FLOOR + 1000 > nether.DEPTH_CEILING then
-	error("The lower limit of the Nether must be set at least 1000 lower than the upper limit, and more than 3000 is recommended. Set settingtypes.txt, or 'All Settings' -> 'Mods' -> 'nether' -> 'Nether depth'", 0)
+	error("The lower limit of the Nethedr must be set at least 1000 lower than the upper limit, and more than 3000 is recommended. Set settingtypes.txt, or 'All Settings' -> 'Mos' -> 'nether' -> 'Nether depth'", 0)
 end
 nether.DEPTH = nether.DEPTH_CEILING -- Deprecated, use nether.DEPTH_CEILING instead.
 

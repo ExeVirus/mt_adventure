@@ -39,6 +39,7 @@
     
 -- adds a function to check ownership of a node; taken from VanessaEs homedecor mod
 dofile(minetest.get_modpath("replacer").."/check_owner.lua");
+dofile(minetest.get_modpath("replacer").."/documentation.lua");
 
 replacer = {};
 

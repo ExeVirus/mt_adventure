@@ -17,6 +17,8 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 ]]--
 
+dofile(minetest.get_modpath("shooter_hook").."/documentation.lua")
+
 local function throw_hook(itemstack, user, vel)
 	local pos = user:get_pos()
 	local dir = user:get_look_dir()
@@ -133,7 +135,7 @@ minetest.register_tool("shooter_hook:grapple_gun_loaded", {
 		end
 		minetest.sound_play("shooter_pistol", {object=user})
 		itemstack = ItemStack("shooter_hook:grapple_hook 1 "..itemstack:get_wear())
-		throw_hook(itemstack, user, 20)
+		throw_hook(itemstack, user, 25)
 		return "shooter_hook:grapple_gun"
 	end,
 })

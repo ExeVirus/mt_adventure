@@ -1,6 +1,8 @@
 local S = minetest.get_translator("orienteering")
 local mod_map = minetest.get_modpath("map") -- map mod from Minetest Game
 
+dofile(minetest.get_modpath("orienteering").."/documentation.lua")
+
 local orienteering = {}
 orienteering.playerhuds = {}
 orienteering.settings = {}

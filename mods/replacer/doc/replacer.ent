@@ -1,0 +1,19 @@
+Replacer
+-----------------
+This tool is helpful for creative purposes (i.e. build a wall and "paint" windows into it).
+It replaces nodes with a previously selected other type of node (i.e. places said windows
+into a brick wall).
+
+Usage: Right-click on a node of that type you want to replace other nodes with.
+       Left-click (normal usage) on any nodes you want to replace with the type you previously right-clicked on.
+       SHIFT-Right-click in order to store a new pattern.
+
+When in creative mode, the node will just be replaced. Your inventory will not be changed.
+
+When not in creative mode, digging will be simulated and you will get what was there. In return, the replacement node
+will be taken from your inventory.
+
+===========================
+This is the most useful creative/building tool in the game.
+Use it with moreblocks circular saw pieces to speed up your
+builds significantly and avoid using the screwdriver so much.
