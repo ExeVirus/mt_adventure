@@ -8,6 +8,10 @@ local material_tools = {
 	"bronze", "diamond", "mese", "stone", "wood",
 }
 
+local material_armor = {
+	"bronze", "diamond", "mese", "stone", "wood", "cactus", "gold",
+}
+
 local material_stairs = {
 	"acacia_wood", "aspen_wood", "brick", "bronzeblock", "cobble", "copperblock",
 	"desert_cobble", "desert_sandstone", "desert_sandstone_block", "desert_sandstone_brick",
@@ -22,13 +26,148 @@ local material_stairs = {
 
 local colors = {
 	"black", "blue", "brown", "cyan", "dark_green", "dark_grey", "green",
-	"grey", "magenta", "orange", "pink", "red", "violet", "yellow",
+	"grey", "magenta", "orange", "pink", "red", "violet", "yellow", "darkgray", "gray",
+}
+
+local mese_colors = {
+	"black", "blue", "brown", "cyan", "dark_green", "dark_grey", "green",
+	"gray", "magenta", "orange", "pink", "red", "violet", "yellow", "darkgray",
 }
 
 local to_compress = {
 	["default:wood"] = {
 		replace = "wood",
 		by = wood_types,
+	},
+
+	["default:leaves"] = {
+		replace = "leaves",
+		by = {
+			"acacia_leaves",
+			"acacia_bush_leaves",
+			"aspen_leaves",
+			"blueberry_bush_leaves",
+			"blueberry_bush_leaves_with_berries",
+			"bush_leaves",
+			"jungle_leaves",
+			"pine_needles",
+			"pine_bush_needles",
+		},
+	},
+	
+	["default:tree"] = {
+		replace = "tree",
+		by = {
+			"acacia_tree",
+			"aspen_tree",
+			"jungle_tree",
+			"pine_tree",
+		},
+	},
+	
+	["default:sapling"] = {
+		replace = "sapling",
+		by = {
+			"acacia_sapling",
+			"aspen_sapling",
+			"jungle_sapling",
+			"pine_sapling",
+			"bush_sapling",
+			"acacia_bush_sapling",
+			"blueberry_bush_sapling",
+			"pine_bush_sapling",
+		},
+	},
+
+	["default:bush_stem"] = {
+		replace = "bush",
+		by = {
+			"acacia_bush",
+			"pine_bush",
+		},
+	},
+
+	["default:clay_lump"] = {
+		replace = "default:clay",
+		by = {
+			"default:coal",
+			"default:copper",
+			"default:iron",
+			"default:gold",
+			"default:tin",
+			"nether:nether_lump",
+		},
+	},
+
+	["default:steel_ingot"] = {
+		replace = "default:steel",
+		by = {
+			"default:copper",
+			"default:gold",
+			"default:tin",
+			"default:bronze",
+			"nether:nether",
+		},
+	},
+
+	["default:stone_with_coal"] = {
+		replace = "coal",
+		by = {
+			"copper",
+			"iron",
+			"tin",
+			"gold",
+			"mese",
+			"diamond",
+		},
+	},
+
+	["default:dirt"] = {
+		replace = "dirt",
+		by = {
+			"dirt_with_grass",
+			"dirt_with_dry_grass",
+			"dirt_with_coniferous_litter",
+			"dirt_with_rainforest_litter",
+			"dirt_with_snow",
+		},
+	},
+
+	["default:grass_1"] = {
+		replace = "grass_1",
+		by = {
+			"jungle_grass",
+			"dry_grass_1",
+			"marram_grass_1",
+		},
+	},
+
+	["default:ladder_wood"] = {
+		replace = "default:ladder_wood",
+		by = {
+			"default:ladder_steel",
+			"ropes:ladder_wood",
+			"ropes:ladder_steel",
+			"ropes:ropeladder_top",
+		},
+	},
+
+	["defuault:coral_brown"] = {
+		replace = "brown",
+		by = {
+			"cyan",
+			"green",
+			"orange",
+			"pink",
+		},
+	},
+
+	["defuault:permafrost"] = {
+		replace = "frost",
+		by = {
+			"frost_with_moss",
+			"frost_with_stones",
+		},
 	},
 
 	["default:fence_wood"] = {
@@ -48,12 +187,104 @@ local to_compress = {
 			"mese_post_light_aspen_wood",
 			"mese_post_light_junglewood",
 			"mese_post_light_pine_wood",
-		}
+		},
 	},
 
 	["doors:gate_wood_closed"] = {
 		replace = "wood",
 		by = wood_types,
+	},
+
+	["doors:door_wood"] = {
+		replace = "doors:door_wood",
+		by = {
+			"doors:door_glass",
+			"doors:door_steel",
+			"doors:door_obsidian_glass",
+			"castle_gates:oak_door",
+			"castle_gates:jail_door",
+		},
+	},
+
+	["drawers:wood1"] = {
+		replace = "wood",
+		by = {
+			"pine_wood",
+			"junglewood",
+			"aspen_wood",
+			"acacia_wood",
+		},
+	},
+
+	["drawers:wood2"] = {
+		replace = "wood",
+		by = {
+			"pine_wood",
+			"junglewood",
+			"aspen_wood",
+			"acacia_wood",
+		},
+	},
+
+	["drawers:wood4"] = {
+		replace = "wood",
+		by = {
+			"pine_wood",
+			"junglewood",
+			"aspen_wood",
+			"acacia_wood",
+		},
+	},
+
+	["drawers:upgrade_template"] = {
+		replace = "template",
+		by = {
+			"steel",
+			"gold",
+			"obsidian",
+			"diamond",
+		},
+	},
+
+	["dmobs:badger"] = {
+		replace = "badger",
+		by = {
+			"dragon",
+			"dragon1",
+			"dragon2",
+			"dragon3",
+			"dragon4",
+			"dragon_black",
+			"dragon_blue",
+			"dragon_green",
+			"dragon_red",
+			"dragon_egg_great",
+			"dragon_great",
+			"dragon_great_tame",
+			"waterdragon",
+			"egg",
+			"elephant",
+			"fox",
+			"gnorm",
+			"golem",
+			"golem_friendly",
+			"hedgehog",
+			"ogre",
+			"orc",
+			"orc2",
+			"owl",
+			"panda",
+			"pig",
+			"pig_evil",
+			"rat",
+			"skeleton",
+			"tortoise",
+			"treeman",
+			"wasp",
+			"wasp_leader",
+			"whale",
+			"wyvern",
+		},
 	},
 
 	["wool:white"] = {
@@ -91,6 +322,22 @@ local to_compress = {
 		by = {"wood", "stone"}
 	},
 
+	["flowers:chrysanthemum_green"] = {
+		replace = "chrysanthemum_green",
+		by = {
+			"dandelion_white",
+			"dandelion_yellow",
+			"germanium",
+			"rose",
+			"tulip",
+			"tulip_black",
+			"viola",
+			"waterlily",
+			"mushroom_brown",
+			"mushroom_red",
+		},
+	},
+
 	["stairs:slab_wood"] = {
 		replace = "wood",
 		by = material_stairs
@@ -114,6 +361,191 @@ local to_compress = {
 	["walls:cobble"] = {
 		replace = "cobble",
 		by = {"desertcobble", "mossycobble"}
+	},
+
+	["homedecor:painting_1"] = {
+		replace = "1",
+		by = {"2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"}
+	},
+
+	["mesecons_lightstone:lightstone_white_off"] = {
+		replace = "white",
+		by = mese_colors,
+	},
+
+	["mobs_animal:sheep_white"] = {
+		replace = "white",
+		by = colors,
+	},
+
+	["ropes:wood1rope_block"] = {
+		replace = "1",
+		by = {"2"},
+	},
+
+	["ropes:copper1rope_block"] = {
+		replace = "1",
+		by = {"2","3","4","5"},
+	},
+
+	["ropes:steel1rope_block"] = {
+		replace = "1",
+		by = {"2","3","4","5","6","7","8","9"},
+	},
+
+	["3d_armor:boots_steel"] = {
+		replace = "steel",
+		by = material_armor
+	},
+
+	["3d_armor:chestplate_steel"] = {
+		replace = "steel",
+		by = material_armor
+	},
+
+	["3d_armor:helmet_steel"] = {
+		replace = "steel",
+		by = material_armor
+	},
+
+	["3d_armor:leggings_steel"] = {
+		replace = "steel",
+		by = material_armor
+	},
+
+	["carts:rail"] = {
+		replace = "carts:rail",
+		by = {
+			"carts:brakerail",
+			"carts:copperrail",
+			"carts:powerrail",
+			"boost_cart:detectorrail",
+			"boost_cart:startstoprail",
+		}
+	},
+
+	["airtanks:steel_tank"] = {
+		replace = "steel_tank",
+		by = {
+			"steel_tank_2",
+			"steel_tank_3",
+			"bronze_tank",
+			"bronze_tank_2",
+			"bronze_tank_3",
+			"copper_tank",
+			"copper_tank_2",
+			"copper_tank_3",
+			"empty_steel_tank",
+			"empty_steel_tank_2",
+			"empty_steel_tank_3",
+			"empty_bronze_tank",
+			"empty_bronze_tank_2",
+			"empty_bronze_tank_3",
+			"empty_copper_tank",
+			"empty_copper_tank_2",
+			"empty_copper_tank_3",
+		}
+	},
+
+	["butterflies:butterfly_red"] = {
+		replace = "red",
+		by = {"violet","white"}
+	},
+
+	["algae:algae_thin"] = {
+		replace = "thin",
+		by = {"medium","thick"}
+	},
+
+	["bows:arrow"] = {
+		replace = "arrow",
+		by = {"arrow_mese", "arrow_diamond", "arrow_steel"}
+	},
+
+	["bows:bow_wood"] = {
+		replace = "wood",
+		by = {"steel", "bronze", "bowie"}
+	},
+
+	["bucket:bucket_empty"] = {
+		replace = "empty",
+		by = {"water", "lava", "river_water"}
+	},
+
+	["bucket_wooden:bucket_empty"] = {
+		replace = "empty",
+		by = {"water", "river_water"}
+	},
+
+	["bonemeal:bonemeal"] = {
+		replace = ":bonemeal",
+		by = {"fertilizer","mulch"},
+	},
+
+	["cartographer:simple_table"] = {
+		replace = "simple",
+		by = {"standard","advanced"},
+	},
+
+	["cartographer:simple_table"] = {
+		replace = "simple",
+		by = {"standard","advanced"},
+	},
+
+	["castle_gates:steel_gate_panel"] = {
+		replace = "steel_gate_panel",
+		by = {
+			"steel_gate_hinge",
+			"steel_gate_edge_handle",
+			"steel_gate_edge_handle",
+			"steel_gate_edge",
+			"steel_portcullis_bars",
+			"steel_portcullis_bars_bottom",
+			"wood_gate_panel",
+			"wood_gate_hinge",
+			"wood_gate_edge_handle",
+			"wood_gate_edge_handle",
+			"wood_gate_edge",
+			"wood_portcullis_bars",
+			"wood_portcullis_bars_bottom",
+		},
+	},
+	
+	["caverealms:glow_mese"] = {
+		replace = "mese",
+		by = {
+			"amethyst",
+			"crystal",
+			"emerald",
+			"ruby",
+		},
+	},
+
+	["caverealms:glow_emerald_ore"] = {
+		replace = "emerald",
+		by = {
+			"amethyst",
+			"crystal",
+			"ruby",
+		},
+	},
+
+	["caverealms:stone_with_algae"] = {
+		replace = "algae",
+		by = {
+			"moss",
+			"lichen",
+		},
+	},
+
+	["dmobs:dragon_gem"] = {
+		replace = "gem",
+		by = {
+			"gem_fire",
+			"gem_ice",
+			"gem_lightning",
+			"gem_poison",
+		}
 	},
 }
 
@@ -262,12 +694,30 @@ local moreblocks_nodes = {
 	"ice",
 }
 
+local nether_nodes = {
+	"brick",
+}
+
+local building_blocks_nodes = {
+	"Adobe",
+	"fakegrass",
+	"grate",
+	"hardwood",
+	"Marble",
+	"Tar",
+	"woodglass",
+	"smoothglass",
+	"Roofing",
+}
+
 local colors_moreblocks = table.copy(colors)
 insert(colors_moreblocks, "white")
 
 local moreblocks_mods = {
 	wool = colors_moreblocks,
 	moreblocks = moreblocks_nodes,
+	nether = nether_nodes,
+	building_blocks = building_blocks_nodes,
 }
 
 local t = {}
@@ -289,7 +739,6 @@ for _, nodename in ipairs(v) do
 	end
 
 	local slope_name = fmt("slope_%s", nodename)
-
 	to_compress[fmt("%s:%s", mod, slope_name)] = {
 		replace = slope_name,
 		by = t[nodename]

@@ -22,4 +22,9 @@
 21. Document Stamina with default MTG
 22. Document built-in commands (tpr especailly)
 23. Force travelnet to be built by going to the caverealms (maybe DM realm?)
+24. Make bowie craftable
+25. Compress all the i3 nodes
+26. Add Nether to 3d armor, and update compression in i3
+27. Drawers Documentation
+28. Fix homedecor dependencies, update i3 compression for them
 
