@@ -5,7 +5,7 @@
 3. Fix algae to be useful in other ways, fix bonemeal to not generate them on dirt...
 4. Go through the default encyclopedia and make changes as needed
 5. Complete the documentation
-6. Rip out SmartFS and replace with I3, then update I3 to include the documentation
+6. update I3 to include the documentation
 7. Document default mtg stuff
 8. Add Main Menu music
 9. Add in-game music
@@ -17,5 +17,9 @@
 15. Hot air Balloon fire particle needs to have the current balloon velocity, rather than still
 16. Update i3 with doc_helper tab
 17. Mob documentation: living nether, dmobs, default?
-18. Mesecons Documentation
 19. Make the maps rename-able
+20. Find the slow ABM
+21. Document Stamina with default MTG
+22. Document built-in commands (tpr especailly)
+23. Force travelnet to be built by going to the caverealms (maybe DM realm?)
+

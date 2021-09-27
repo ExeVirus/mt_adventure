@@ -1,6 +1,8 @@
 local modname = minetest.get_current_modname()
 local S = minetest.get_translator(modname)
 
+dofile(minetest.get_modpath(modname).."/documentation.lua")
+
 local data = {}
 
 local node_sound

@@ -1,0 +1,18 @@
+Travelnet
+-----------------
+Travelnets and Elevators are powerful tools for builders 
+and adventurers alike. Build your own network of teleportors
+and get where you want to be instantly!
+
+Elevators only work in the y direction, and must be placed over each
+other.
+
+Travelnets can be placed anywhere and be on seperate networks (by player and name).
+
+-------------------------------------------------
+Usage:
+- right-click on it; enter name of the station (e.g. "my house", "center of desert city") and name of the network (e.g. "intresting towns","my buildings")
+- punch it to update the list of stations on that network
+- right-click to use the travelbox
+
+An unconfigured travelnet box can be configured by anyone. If it is misconfigured, just dig it and place it anew.

@@ -94,6 +94,8 @@ travelnet = {};
 travelnet.targets = {};
 travelnet.path = minetest.get_modpath(minetest.get_current_modname())
 
+-- Documentation
+ dofile(travelnet.path .. "/documentation.lua")
 
 -- Intllib
 local S = dofile(travelnet.path .. "/intllib.lua")
