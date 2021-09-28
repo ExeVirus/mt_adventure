@@ -166,7 +166,7 @@ local to_compress = {
 			"silicon",
 			"steel_bar",
 			"steel_strip",
-			"energy_crystal_simple"
+			"energy_crystal_simple",
 		},
 	},
 
@@ -184,13 +184,13 @@ local to_compress = {
 	},
 
 	["beds:bed_bottom"] = {
-		replace = "beds:bed_bottom"
+		replace = "beds:bed_bottom",
 		by = {
 			"beds:bed_bottom",
 			"homedecor:bed_kingsize",
 			"homedecor:bed_regular",
 		}
-	}
+	},
 
 	["homedecor:fence_picket"] = {
 		replace = "fence_picket",
@@ -210,6 +210,7 @@ local to_compress = {
 			"fence_privacy_corner",
 			"fence_wrought_iron_2",
 			"fence_wrought_iron_2_corner",
+			"fence_wrought_iron",
 			"fence_wrought_iron",
 			"fence_brass",
 		}
@@ -438,6 +439,7 @@ local to_compress = {
 			"default:axe_wood",
 			"moreores:axe_silver",
 			"moreores:axe_mithril",
+			"nether:axe_nether",
 		}
 	},
 
@@ -451,6 +453,7 @@ local to_compress = {
 			"default:pick_wood",
 			"moreores:pick_silver",
 			"moreores:pick_mithril",
+			"nether:pick_nether",
 		}
 	},
 
@@ -464,6 +467,7 @@ local to_compress = {
 			"default:shovel_wood",
 			"moreores:shovel_silver",
 			"moreores:shovel_mithril",
+			"nether:shovel_nether",
 		}
 	},
 
@@ -477,6 +481,7 @@ local to_compress = {
 			"default:sword_wood",
 			"moreores:sword_silver",
 			"moreores:sword_mithril",
+			"nether:sword_nether",
 		}
 	},
 
@@ -490,6 +495,7 @@ local to_compress = {
 			"farming:hoe_wood",
 			"moreores:hoe_silver",
 			"moreores:hoe_mithril",
+			"nether:hoe_nether",
 		}
 	},
 
@@ -709,6 +715,13 @@ local to_compress = {
 		},
 	},
 
+	["caverealms:glow_worm"] = {
+		replace = "worm",
+		by = {
+			"worm_green",
+		},
+	},
+
 	["dmobs:dragon_gem"] = {
 		replace = "gem",
 		by = {
@@ -757,6 +770,75 @@ local to_compress = {
 			"lavafall_block",
 			"waterfall_block_inv",
 			"lavafall_block_inv",
+		}
+	},
+
+	--Bricks and blocks
+	["caverealms:glow_obsidian"] = {
+		replace = "an",
+		by = {
+			"an_brick",
+		}
+	},
+
+	["caverealms:glow_obsidian2"] = {
+		replace = "2",
+		by = {
+			"2_brick",
+		}
+	},
+
+	["default:obsidian"] = {
+		replace = "ne",
+		by = {
+			"an_block",
+			"an_brick",
+		}
+	},
+	
+	["default:desert_sandstone"] = {
+		replace = "ne",
+		by = {
+			"ne_block",
+			"ne_brick",
+		}
+	},
+	
+	["default:silver_sandstone"] = {
+		replace = "ne",
+		by = {
+			"ne_block",
+			"ne_brick",
+		}
+	},
+
+	["default:sandstone"] = {
+		replace = "ne",
+		by = {
+			"ne_block",
+			"ne_brick",
+		}
+	},
+
+	["default:desert_stone"] = {
+		replace = "ne",
+		by = {
+			"ne_block",
+			"nebrick",
+		}
+	},
+	
+	["default:coal_stone"] = {
+		replace = "ne",
+		by = {
+			"ne_brick",
+		}
+	},
+
+	["default:iron_stone"] = {
+		replace = "ne",
+		by = {
+			"ne_brick",
 		}
 	},
 }
