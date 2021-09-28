@@ -25,6 +25,24 @@ minetest.register_craft({
 	output = 'bucket:bucket_lava 1',
 	recipe = {'falls:lava_turbulent'},
 })
+if minetest.get_modpath("i3") then
+	i3.register_craft_type("Whirlpool Machine", {
+		description = "Whirlpool Machine",
+		icon = "whirlpool_machine_front.png",
+	})
+	
+	i3.register_craft({
+		type   = "Whirlpool Machine",
+		result = "falls:lava_turbulent",
+		items  = {"bucket:bucket_lava"},
+	})
+	
+	i3.register_craft({
+		type   = "Whirlpool Machine",
+		result = "falls:bucket_turbulent",
+		items  = {"bucket:bucket_water"},
+	})
+end
 if minetest.get_modpath("unified_inventory") then
     unified_inventory.register_craft_type('whirlpool_mach', {
         description = 'Whirlpool Machine',
