@@ -26,5 +26,5 @@
 25. Compress all the i3 nodes
 26. Add Nether to 3d armor, and update compression in i3
 27. Drawers Documentation
-28. Fix homedecor dependencies, update i3 compression for them
+28. Test all the mobs, especially punching dragons
 

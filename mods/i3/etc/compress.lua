@@ -45,7 +45,7 @@ local to_compress = {
 			"blueberry_bush_leaves",
 			"blueberry_bush_leaves_with_berries",
 			"bush_leaves",
-			"jungle_leaves",
+			"jungleleaves",
 			"pine_needles",
 			"pine_bush_needles",
 		},
@@ -92,9 +92,9 @@ local to_compress = {
 			"default:iron",
 			"default:gold",
 			"default:tin",
-			"moreores:silver_lump",
-			"moreores:mithril_lump",
-			"nether:nether_lump",
+			"moreores:silver",
+			"moreores:mithril",
+			"nether:nether",
 		},
 	},
 
@@ -120,8 +120,8 @@ local to_compress = {
 			"default:tin",
 			"default:bronze",
 			"default:diamond",
-			"moreores:silver",
-			"moreores:mithril",
+			"moreores:silver_",
+			"moreores:mithril_",
 			"basic_materials:brass_",
 		},
 	},
@@ -217,14 +217,16 @@ local to_compress = {
 	},
 
 	["default:stone_with_coal"] = {
-		replace = "coal",
+		replace = "default:stone_with_coal",
 		by = {
-			"copper",
-			"iron",
-			"tin",
-			"gold",
-			"mese",
-			"diamond",
+			"default:stone_with_copper",
+			"default:stone_with_iron",
+			"default:stone_with_tin",
+			"default:stone_with_gold",
+			"default:stone_with_mese",
+			"default:stone_with_diamond",
+			"moreores:mineral_silver",
+			"moreores:mineral_mithril",
 		},
 	},
 
@@ -245,6 +247,17 @@ local to_compress = {
 			"jungle_grass",
 			"dry_grass_1",
 			"marram_grass_1",
+			"fern_1",
+			"dry_shrub",
+			"junglegrass",
+			"sand_with_kelp",
+		},
+	},
+
+	["default:water_source"] = {
+		replace = "water_source",
+		by = {
+			"river_water_source",
 		},
 	},
 
@@ -258,7 +271,7 @@ local to_compress = {
 		},
 	},
 
-	["defuault:coral_brown"] = {
+	["default:coral_brown"] = {
 		replace = "brown",
 		by = {
 			"cyan",
@@ -375,6 +388,7 @@ local to_compress = {
 			"gold",
 			"obsidian",
 			"diamond",
+			"mithril",
 		},
 	},
 
@@ -504,7 +518,7 @@ local to_compress = {
 		by = {
 			"dandelion_white",
 			"dandelion_yellow",
-			"germanium",
+			"geranium",
 			"rose",
 			"tulip",
 			"tulip_black",
@@ -545,14 +559,600 @@ local to_compress = {
 		by = {"2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20"}
 	},
 
+	["homedecor:bottle_brown"] = {
+		replace = "bottle_brown",
+		by = {
+			"bottle_green",
+			"4_bottles_brown",
+			"4_bottles_green",
+			"4_bottles_multi",
+			"wine_rack",
+		}
+	},
+
+	["homedecor:analog_clock_wood"] = {
+		replace = "analog_clock_wood",
+		by = {
+			"analog_clock_plastic",
+			"digital_clock",
+			"alarm_clock",
+			"grandfather_clock",
+		}
+	},
+
+	["homedecor:banister_wood_horizontal"] = {
+		replace = "wood",
+		by = {
+			"white_dark",
+			"digital_clock",
+			"wrought_iron",
+			"brass",
+		}
+	},
+
+	["homedecor:bathroom_tiles_dark"] = {
+		replace = "dark",
+		by = {
+			"light",
+			"medium",
+		}
+	},
+
+	["homedecor:sink"] = {
+		replace = "sink",
+		by = {
+			"taps",
+			"taps_brass",
+		}
+	},
+
+	["homedecor:bathtub_clawfoot_brass_taps"] = {
+		replace = "brass",
+		by = {
+			"chrome",
+		}
+	},
+
+	["homedecor:bench_large_1"] = {
+		replace = "bench_large_1",
+		by = {
+			"bench_large_2",
+			"simple_bench",
+		}
+	},
+
+	["homedecor:blinds_thin"] = {
+		replace = "blinds_thin",
+		by = {
+			"blinds_thick",
+			"shutter",
+		}
+	},
+
+	["homedecor:book_blue"] = {
+		replace = "blue",
+		by = {
+			"green",
+			"brown",
+			"grey",
+			"red",
+			"violet",
+		}
+	},
+
+	["homedecor:candle"] = {
+		replace = "candle",
+		by = {
+			"candle_thin",
+			"candlestick_wrought_iron",
+			"candlestick_brass",
+		}
+	},
+
+	["homedecor:cardboard_box_big"] = {
+		replace = "cardboard_box_big",
+		by = {
+			"cardboard_box",
+		}
+	},
+
+	["homedecor:chandelier_steel"] = {
+		replace = "steel",
+		by = {
+			"brass",
+		}
+	},
+
+	["homedecor:curtainrod_wood"] = {
+		replace = "wood",
+		by = {
+			"brass",
+			"wrought_iron",
+		}
+	},
+
+	["homedecor:armchair"] = {
+		replace = "homedecor:armchair",
+		by = {
+			"lrfurn:armchair",
+		}
+	},
+
+	["homedecor:deckchair"] = {
+		replace = "deckchair",
+		by = {
+			"deckchair_striped_blue",
+		}
+	},
+
+	["homedecor:kitchen_chair_wood"] = {
+		replace = "wood",
+		by = {
+			"padded",
+		}
+	},
+
+	["homedecor:office_chair_basic"] = {
+		replace = "basic",
+		by = {
+			"upscale",
+		}
+	},
+
+	["homedecor:dishwasher"] = {
+		replace = "dishwasher",
+		by = {
+			"dishwasher_granite",
+			"dishwasher_marble",
+			"dishwasher_steel",
+			"dishwasher_wood",
+			"washing_machine",
+			"dryer",
+			"air_conditioner",
+			"oven",
+			"oven_locked",
+			"oven_steel",
+			"oven_steel_locked",
+		}
+	},
+
+	["homedecor:filing_cabinet"] = {
+		replace = "filing_cabinet",
+		by = {
+			"filing_cabinet_locked",
+		}
+	},
+
+	["homedecor:kitchen_cabinet_colorable"] = {
+		replace = "able",
+		by = {
+			"able_locked",
+			"able_granite",
+			"able_granite_locked",
+			"able_half",
+			"able_half_locked",
+			"able_marble",
+			"able_marble_locked",
+			"able_steel",
+			"able_steel_locked",
+			"able_with_drawers",
+			"able_with_drawers_locked",
+			"able_with_drawers_granite",
+			"able_with_drawers_granite_locked",
+			"able_with_drawers_marble",
+			"able_with_drawers_marble_locked",
+			"able_with_drawers_steel",
+			"able_with_drawers_steel_locked",
+			"able_with_sink",
+			"able_with_sink_locked",
+		}
+	},
+
+	["homedecor:flower_pot_small"] = {
+		replace = "flower_pot_small",
+		by = {
+			"flower_pot_terracotta",
+			"flower_pot_green",
+			"flower_pot_black",
+			"potted_bonsai",
+			"potted_cactus",
+			"potted_dandelion_white",
+			"potted_dandelion_yellow",
+			"potted_geranium",
+			"potted_rose",
+			"potted_tulip",
+			"potted_viola",
+		}
+	},
+
+	["homedecor:flower_pot_small"] = {
+		replace = "flower_pot_small",
+		by = {
+			"flower_pot_terracotta",
+			"flower_pot_green",
+			"flower_pot_black",
+			"potted_bonsai",
+			"potted_cactus",
+			"potted_dandelion_white",
+			"potted_dandelion_yellow",
+			"potted_geranium",
+			"potted_rose",
+			"potted_tulip",
+			"potted_viola",
+		}
+	},
+
+	["homedecor:glass_table_large_square_with_wood_legs"] = {
+		replace = "glass_table_large_square_with_wood_legs",
+		by = {
+			"glass_table_large_square_with_wrought_iron_legs",
+			"glass_table_large_square_with_brass_legs",
+			"glass_table_large_square",
+			"wood_table_large_square_with_wood_legs",
+			"wood_table_large_square_with_wrought_iron_legs",
+			"wood_table_large_square_with_brass_legs",
+			"wood_table_large_square",
+		}
+	},
+
+	["homedecor:glass_table_small_square_with_wood_legs"] = {
+		replace = "glass_table_small_square_with_wood_legs",
+		by = {
+			"glass_table_small_square_with_wrought_iron_legs",
+			"glass_table_small_square_with_brass_legs",
+			"glass_table_small_square",
+			"wood_table_small_square_with_wood_legs",
+			"wood_table_small_square_with_wrought_iron_legs",
+			"wood_table_small_square_with_brass_legs",
+			"wood_table_small_square",
+		}
+	},
+
+	["homedecor:glass_table_small_round_with_wood_legs"] = {
+		replace = "glass_table_small_round_with_wood_legs",
+		by = {
+			"glass_table_small_round_with_wrought_iron_legs",
+			"glass_table_small_round_with_brass_legs",
+			"glass_table_small_round",
+			"wood_table_small_round_with_wood_legs",
+			"wood_table_small_round_with_wrought_iron_legs",
+			"wood_table_small_round_with_brass_legs",
+			"wood_table_small_round",
+		}
+	},
+
+	["homedecor:glowlight_small_cube_14"] = {
+		replace = "glowlight_small_cube_14",
+		by = {
+			"glowlight_quarter_14",
+			"glowlight_half_14",
+			"nd",
+		}
+	},
+
+	["homedecor:japanese_wall_bottom"] = {
+		replace = "bottom",
+		by = {
+			"middle",
+			"top",
+		}
+	},
+	
+	["homedecor:lattice_lantern_large_14"] = {
+		replace = "large",
+		by = {
+			"small",
+		}
+	},
+
+	["homedecor:lattice_wood"] = {
+		replace = "wood",
+		by = {
+			"wood_vegetal",
+			"white_wood",
+			"white_wood_vegetal",
+		}
+	},
+
+	["homedecor:microwave_oven"] = {
+		replace = "oven",
+		by = {
+			"oven_locked",
+		}
+	},
+
+	["homedecor:microwave_oven"] = {
+		replace = "oven",
+		by = {
+			"oven_locked",
+		}
+	},
+
+	["homedecor:nightstand_oak_one_drawer"] = {
+		replace = "oak_one_drawer",
+		by = {
+			"oak_one_drawer_locked",
+			"oak_two_drawers",
+			"oak_two_drawers_locked",
+			"mahogany_one_drawer",
+			"mahogany_one_drawer_locked",
+			"mahogany_two_drawers",
+			"mahogany_two_drawers_locked",
+		}
+	},
+
+	["homedecor:picture_frame1"] = {
+		replace = "1",
+		by = {
+			"2",
+		}
+	},
+
+	["homedecor:refrigerator_white"] = {
+		replace = "white",
+		by = {
+			"white_locked",
+			"steel",
+			"steel_locked",
+		}
+	},
+
+	["homedecor:rope_light_on_ceiling_off"] = {
+		replace = "ceiling",
+		by = {
+			"floor",
+		}
+	},
+
+	["homedecor:rug_small"] = {
+		replace = "small",
+		by = {
+			"large",
+			"persian",
+		}
+	},
+
+	["homedecor:skylight"] = {
+		replace = "skylight",
+		by = {
+			"skylight_frosted",
+		}
+	},
+
+	["homedecor:speaker"] = {
+		replace = "speaker",
+		by = {
+			"speaker_small",
+		}
+	},
+
+	["homedecor:standing_lamp_11"] = {
+		replace = "11",
+		by = {
+			"14",
+		}
+	},
+
+	["homedecor:table_lamp_11"] = {
+		replace = "11",
+		by = {
+			"14",
+		}
+	},
+
+	["homedecor:table_legs_wood"] = {
+		replace = "wood",
+		by = {
+			"wrought_iron",
+			"brass",
+		}
+	},
+
+	["homedecor:table"] = {
+		replace = "table",
+		by = {
+			"table_white",
+			"table_mahogany",
+		}
+	},
+
+	["homedecor:window_plain"] = {
+		replace = "plain",
+		by = {
+			"quartered",
+		}
+	},
+
+	["homedecor:welcome_mat_brown"] = {
+		replace = "brown",
+		by = {
+			"green",
+			"grey",
+		}
+	},
+
+	["homedecor:shingles_asphalt"] = {
+		replace = "s_asphalt",
+		by = {
+			"_side_asphalt",
+			"_outer_corner_asphalt",
+			"_inner_corner_asphalt",
+		}
+	},
+
+	["homedecor:shingles_wood"] = {
+		replace = "s_wood",
+		by = {
+			"_side_wood",
+			"_outer_corner_wood",
+			"_inner_corner_wood",
+		}
+	},
+
+	["homedecor:shingles_terracotta"] = {
+		replace = "s_terracotta",
+		by = {
+			"_side_terracotta",
+			"_outer_corner_terracotta",
+			"_inner_corner_terracotta",
+		}
+	},
+
+	["homedecor:shrubbery_green"] = {
+		replace = "green",
+		by = {
+			"red",
+			"yellow",
+			"large_green",
+			"large_red",
+			"large_yellow",
+		}
+	},
+
+	["lrfurn:sofa"] = {
+		replace = "sofa",
+		by = {
+			"longsofa",
+		}
+	},
+
+	["i3:bag_large"] = {
+		replace = "large",
+		by = {
+			"medium",
+			"small",
+		}
+	},
+
+	["fake_fire:chimney_top_sandstone"] = {
+		replace = "sandstone",
+		by = {
+			"stone",
+		}
+	},
+
 	["mesecons_lightstone:lightstone_white_off"] = {
 		replace = "white",
 		by = mese_colors,
 	},
 
+	["mesecons_gates:and_off"] = {
+		replace = "and",
+		by = {
+			"diode",
+			"nand",
+			"nor",
+			"not",
+			"or",
+			"xor",
+		}
+	},
+
+	["mesecons_movestones:movestone"] = {
+		replace = ":movestone",
+		by = {
+			":movestone_vertical",
+			":sticky_movestone",
+			":sticky_movestone_vertical",
+		}
+	},
+
+	["mesecons_pistons:piston_normal_off"] = {
+		replace = "normal",
+		by = {
+			"sticky",
+		}
+	},
+
+	["mesecons_pressureplates:pressure_plate_wood_off"] = {
+		replace = "wood",
+		by = {
+			"stone",
+		}
+	},
+
+	["mesecons_insulated:insulated_off"] = {
+		replace = "mesecons_insulated:insulated_off",
+		by = {
+			"mesecons_extrawires:corner_off",
+			"mesecons_extrawires:crossover_off",
+			"mesecons_extrawires:doublecorner_00",
+			"mesecons_extrawires:tjunction_off",
+		}
+	},
+
+	["mesecons_fpga:fpga0000"] = {
+		replace = "mesecons_fpga:fpga0000",
+		by = {
+			"mesecons_fpga:programmer",
+			"mesecons_luacontroller:luacontroller0000",
+			"mesecons_microcontroller:microcontroller0000",
+		}
+	},
+
 	["mobs_animal:sheep_white"] = {
 		replace = "white",
 		by = colors,
+	},
+
+	["mob_horse:horse"] = {
+		replace = "mob_horse:horse",
+		by = {
+			"mobs_animal:bee",
+			"mobs_animal:bunny",
+			"mobs_animal:chicken",
+			"mobs_animal:cow",
+			"mobs_animal:kitten",
+			"mobs_animal:panda",
+			"mobs_animal:penguin",
+			"mobs_animal:pumba",
+			"mobs_animal:rat",
+			"mobs_crocs:crocodile",
+			"mobs_crocs:crocodile_float",
+			"mobs_crocs:crocodile_swim",
+			"mobs_fish:clownfish",
+			"mobs_fish:tropical",
+			"mobs_jellyfish:jellyfish",
+			"mobs_sharks:shark_lg",
+			"mobs_sharks:shark_md",
+			"mobs_sharks:shark_sm",
+			"mobs_turtles:seaturtle",
+			"mobs_turtles:turtle",
+			"sneeker:spawnegg",
+		}
+	},
+	
+	["mobs:horseshoe_steel"] = {
+		replace = "steel",
+		by = {
+			"bronze",
+			"mese",
+			"diamond",
+		}
+	},
+
+	["mobs:chicken_cooked"] = {
+		replace = "chicken",
+		by = {
+			"mutton",
+			"pork",
+			"rabitt",
+			"rat",
+		}
+	},
+
+	["livingnether:cyst"] = {
+		replace = "cyst",
+		by = {
+			"flyingrod",
+			"lavawalker",
+			"noddlemaster",
+			"razorback",
+			"sokaarcher",
+			"sokameele",
+			"tardigrade",
+			"whip",
+		}
 	},
 
 	["ropes:wood1rope_block"] = {
@@ -573,6 +1173,11 @@ local to_compress = {
 	["3d_armor:boots_steel"] = {
 		replace = "steel",
 		by = material_armor
+	},
+
+	["3d_armor_stand:armor_stand"] = {
+		replace = ":armor_stand",
+		by = {":armor_stand_locked"}
 	},
 
 	["3d_armor:chestplate_steel"] = {
@@ -775,24 +1380,66 @@ local to_compress = {
 
 	--Bricks and blocks
 	["caverealms:glow_obsidian"] = {
-		replace = "an",
+		replace = "caverealms:glow_obsidian",
 		by = {
-			"an_brick",
+			"caverealms:glow_obsidian_brick",
+			"stairs:slab_glow_obsidian_brick",
+			"stairs:stair_glow_obsidian_brick",
+			"stairs:stair_inner_glow_obsidian_brick",
+			"stairs:stair_outer_glow_obsidian_brick",
 		}
 	},
 
-	["caverealms:glow_obsidian2"] = {
-		replace = "2",
+	["caverealms:glow_obsidian_2"] = {
+		replace = "caverealms:glow_obsidian_2",
 		by = {
-			"2_brick",
+			"caverealms:glow_obsidian_brick_2",
+			"stairs:slab_glow_obsidian_brick_2",
+			"stairs:stair_glow_obsidian_brick_2",
+			"stairs:stair_inner_glow_obsidian_brick_2",
+			"stairs:stair_outer_glow_obsidian_brick_2",
+		}
+	},
+
+	["caverealms:glow_gem"] = {
+		replace = "glow_gem",
+		by = {
+			"salt_gem",
+			"spike",
+		}
+	},
+
+	["caverealms:icicle_down"] = {
+		replace = "down",
+		by = {
+			"up",
 		}
 	},
 
 	["default:obsidian"] = {
-		replace = "ne",
+		replace = "an",
 		by = {
 			"an_block",
-			"an_brick",
+			"anbrick",
+			"an_glass",
+			"an_shard",
+		}
+	},
+
+	["default:obsidian"] = {
+		replace = "an",
+		by = {
+			"an_block",
+			"anbrick",
+			"an_glass",
+			"an_shard",
+		}
+	},
+
+	["default:chest"] = {
+		replace = "chest",
+		by = {
+			"chest_locked",
 		}
 	},
 	
@@ -816,7 +1463,24 @@ local to_compress = {
 		replace = "ne",
 		by = {
 			"ne_block",
-			"ne_brick",
+			"nebrick",
+		}
+	},
+
+	["default:stone"] = {
+		replace = "ne",
+		by = {
+			"ne_block",
+			"nebrick",
+		}
+	},
+
+	["ethereal:banana"] = {
+		replace = "banana",
+		by = {
+			"bananaleaves",
+			"orange",
+			"strawberry",
 		}
 	},
 
@@ -839,6 +1503,120 @@ local to_compress = {
 		replace = "ne",
 		by = {
 			"ne_brick",
+		}
+	},
+
+	["farming:seed_barley"] = {
+		replace = "barley",
+		by = {
+			"cotton",
+			"hemp",
+			"mint",
+			"oat",
+			"rice",
+			"rye",
+			"wheat",
+		}
+	},
+
+	["default:sign_wall_wood"] = {
+		replace = "wood",
+		by = {
+			"steel",
+		}
+	},
+
+	["nether:fumarole"] = {
+		replace = "fumarole",
+		by = {
+			"fumarole_corner",
+			"fumarole_slab",
+		}
+	},
+
+	["nether:brick"] = {
+		replace = "nether:brick",
+		by = {
+			"nether:brick_cracked",
+			"stairs:slab_nether_brick",
+			"stairs:stair_nether_brick",
+			"stairs:stair_inner_nether_brick",
+			"stairs:stair_outer_nether_brick",
+		}
+	},
+
+	["farming:hemp_block"] = {
+		replace = "farming:hemp_block",
+		by = {
+			"stairs:slab_hemp_block",
+			"stairs:stair_hemp_block",
+			"stairs:stair_inner_hemp_block",
+			"stairs:stair_outer_hemp_block",
+		}
+	},
+
+	["moreblocks:wood_tile"] = {
+		replace = "tile",
+		by = {
+			"tile_full",
+			"tile_center",
+			"tile_offset",
+		}
+	},
+
+	["sickles:moss"] = {
+		replace = "moss",
+		by = {
+			"moss_yellow",
+			"moss_blue",
+			"moss_purple",
+		}
+	},
+
+	["sickles:moss_block"] = {
+		replace = "sickles:moss_block",
+		by = {
+			"sickles:moss_block_yellow",
+			"sickles:moss_block_blue",
+			"sickles:moss_block_purple",
+			"stairs:slab_moss_block",
+			"stairs:slab_moss_block_yellow",
+			"stairs:slab_moss_block_blue",
+			"stairs:slab_moss_block_purple",
+			"stairs:stair_inner_moss_block",
+			"stairs:stair_inner_moss_block_yellow",
+			"stairs:stair_inner_moss_block_blue",
+			"stairs:stair_inner_moss_block_purple",
+			"stairs:stair_moss_block",
+			"stairs:stair_moss_block_yellow",
+			"stairs:stair_moss_block_blue",
+			"stairs:stair_moss_block_purple",
+			"stairs:stair_outer_moss_block",
+			"stairs:stair_outer_moss_block_yellow",
+			"stairs:stair_outer_moss_block_blue",
+			"stairs:stair_outer_moss_block_purple",
+		}
+	},
+
+	["sickles:scythe_steel"] = {
+		replace = "steel",
+		by = {
+			"bronze",
+		}
+	},
+
+	["sickles:scythe_steel"] = {
+		replace = "steel",
+		by = {
+			"bronze",
+		}
+	},	
+
+	["sickles:sickle_steel"] = {
+		replace = "steel",
+		by = {
+			"bronze",
+			"gold",
 		}
 	},
 }
@@ -1010,6 +1788,7 @@ insert(colors_moreblocks, "white")
 local moreblocks_mods = {
 	wool = colors_moreblocks,
 	moreblocks = moreblocks_nodes,
+	technic = {"concrete"},
 	nether = nether_nodes,
 	building_blocks = building_blocks_nodes,
 }

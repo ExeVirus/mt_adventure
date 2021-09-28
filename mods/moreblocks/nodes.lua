@@ -52,17 +52,6 @@ local nodes = {
 		"default_wood.png^moreblocks_wood_tile.png^[transformR90"},
 		sounds = sound_wood,
 	},
-	["wood_tile_flipped"] = {
-		description = S("Wooden Tile") .. deprecated,
-		tiles = {"default_wood.png^moreblocks_wood_tile.png^[transformR90",
-		"default_wood.png^moreblocks_wood_tile.png^[transformR90",
-		"default_wood.png^moreblocks_wood_tile.png^[transformR90",
-		"default_wood.png^moreblocks_wood_tile.png^[transformR90",
-		"default_wood.png^moreblocks_wood_tile.png^[transformR180",
-		"default_wood.png^moreblocks_wood_tile.png^[transformR180"},
-		no_stairs = true,
-		on_place = wood_tile_replace
-	},
 	["wood_tile_center"] = {
 		description = S("Centered Wooden Tile"),
 		groups = {wood = 1, choppy = 2, oddly_breakable_by_hand = 2, flammable = 3},
@@ -86,24 +75,6 @@ local nodes = {
 		tiles = {"default_wood.png^moreblocks_wood_tile_offset.png"},
 		sounds = sound_wood,
 		no_stairs = true,
-	},
-	["wood_tile_down"] = {
-		description = S("Downwards Wooden Tile") .. deprecated,
-		tiles = {"default_wood.png^[transformR180^moreblocks_wood_tile_offset.png^[transformR180"},
-		no_stairs = true,
-		on_place = wood_tile_replace
-	},
-	["wood_tile_left"] = {
-		description = S("Leftwards Wooden Tile") .. deprecated,
-		tiles = {"default_wood.png^[transformR270^moreblocks_wood_tile_offset.png^[transformR270"},
-		no_stairs = true,
-		on_place = wood_tile_replace
-	},
-	["wood_tile_right"] = {
-		description = S("Rightwards Wooden Tile") .. deprecated,
-		tiles = {"default_wood.png^[transformR90^moreblocks_wood_tile_offset.png^[transformR90"},
-		no_stairs = true,
-		on_place = wood_tile_replace
 	},
 	["circle_stone_bricks"] = {
 		description = S("Circle Stone Bricks"),
