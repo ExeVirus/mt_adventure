@@ -4,12 +4,8 @@ local wood_types = {
 	"acacia_wood", "aspen_wood", "junglewood", "pine_wood",
 }
 
-local material_tools = {
-	"bronze", "diamond", "mese", "stone", "wood",
-}
-
 local material_armor = {
-	"bronze", "diamond", "mese", "stone", "wood", "cactus", "gold",
+	"bronze", "diamond", "mese", "stone", "wood", "cactus", "gold", "mithril"
 }
 
 local material_stairs = {
@@ -70,7 +66,8 @@ local to_compress = {
 		by = {
 			"acacia_sapling",
 			"aspen_sapling",
-			"jungle_sapling",
+			"junglesapling",
+			"emergent_jungle_sapling",
 			"pine_sapling",
 			"bush_sapling",
 			"acacia_bush_sapling",
@@ -95,6 +92,8 @@ local to_compress = {
 			"default:iron",
 			"default:gold",
 			"default:tin",
+			"moreores:silver_lump",
+			"moreores:mithril_lump",
 			"nether:nether_lump",
 		},
 	},
@@ -106,8 +105,114 @@ local to_compress = {
 			"default:gold",
 			"default:tin",
 			"default:bronze",
+			"moreores:silver",
+			"moreores:mithril",
 			"nether:nether",
+			"basic_materials:brass",
 		},
+	},
+	
+	["default:steelblock"] = {
+		replace = "default:steel",
+		by = {
+			"default:copper",
+			"default:gold",
+			"default:tin",
+			"default:bronze",
+			"default:diamond",
+			"moreores:silver",
+			"moreores:mithril",
+			"basic_materials:brass_",
+		},
+	},
+
+	["basic_materials:chain_brass"] = {
+		replace = "basic_materials:chain_brass",
+		by = {
+			"basic_materials:chain",
+			"basic_materials:chainlink_brass",
+			"basic_materials:chainlink_steel",
+			"basic_materials:chain_steel",
+			"basic_materials:chain_brass_top",
+			"homedecor:chains",
+			"homedecor:chain_steel_top",
+		}
+	},	
+	
+	["basic_materials:copper_wire"] = {
+		replace = "copper_wire",
+		by = {
+			"empty_spool",
+			"gold_wire",
+			"silver_wire",
+			"steel_wire",
+		}
+	},
+
+	["basic_materials:gear_steel"] = {
+		replace = "gear_steel",
+		by = {
+			"cement_block",
+			"concrete_block",
+			"copper_strip",
+			"energy_crystal",
+			"heating_element",
+			"ic",
+			"motor",
+			"padlock",
+			"paraffin",
+			"plastic_sheet",
+			"plastic_strip",
+			"silicon",
+			"steel_bar",
+			"steel_strip",
+			"energy_crystal_simple"
+		},
+	},
+
+	["bell:bell"] = {
+		replace = ":bell",
+		by = {":bell_small"},
+	},
+
+	["bike:bike"] = {
+		replace = ":bike",
+		by = { 
+			":handles",
+			":wheel",
+		},
+	},
+
+	["beds:bed_bottom"] = {
+		replace = "beds:bed_bottom"
+		by = {
+			"beds:bed_bottom",
+			"homedecor:bed_kingsize",
+			"homedecor:bed_regular",
+		}
+	}
+
+	["homedecor:fence_picket"] = {
+		replace = "fence_picket",
+		by = {
+			"fence_picket_corner",
+			"gate_picket_closed",
+			"fence_picket_white",
+			"fence_picket_corner_white",
+			"gate_picket_white_closed",
+			"fence_chainlink",
+			"fence_chainlink_corner",
+			"gate_chainlink_closed",
+			"fence_barbed_wire",
+			"fence_barbed_wire_corner",
+			"gate_barbed_wire_closed",
+			"fence_privacy",
+			"fence_privacy_corner",
+			"fence_wrought_iron_2",
+			"fence_wrought_iron_2_corner",
+			"fence_wrought_iron",
+			"fence_brass",
+		}
 	},
 
 	["default:stone_with_coal"] = {
@@ -162,7 +267,7 @@ local to_compress = {
 		},
 	},
 
-	["defuault:permafrost"] = {
+	["default:permafrost"] = {
 		replace = "frost",
 		by = {
 			"frost_with_moss",
@@ -201,8 +306,34 @@ local to_compress = {
 			"doors:door_glass",
 			"doors:door_steel",
 			"doors:door_obsidian_glass",
+			"doors:homedecor_basic_panel",
+			"doors:homedecor_carolina",
+			"doors:homedecor_closet_mahogany",
+			"doors:homedecor_closet_oak",
+			"doors:homedecor_exterior_fancy",
+			"doors:homedecor_french_mahogany",
+			"doors:homedecor_french_oak",
+			"doors:homedecor_french_white",
+			"doors:homedecor_woodglass",
+			"doors:homedecor_wood_plain",
+			"doors:homedecor_wrought_iron",
+			"homedecor:door_japanese_closed",
+			"travelnet:elevator_door_glass_closed",
+			"travelnet:elevator_door_steel_closed",
+			"travelnet:elevator_door_tin_closed",
+			"homedecor:gate_healf_door_closed",
+			"homedecor:gate_healf_door_white_closed",
 			"castle_gates:oak_door",
 			"castle_gates:jail_door",
+			"xpanes:door_steel_bar",
+		},
+	},
+
+	["doors:trapdoor"] = {
+		replace = "doors:trapdoor",
+		by = {
+			"doors:trapdoor_steel",
+			"xpanes:trapdoor_steel_bar",
 		},
 	},
 
@@ -298,28 +429,68 @@ local to_compress = {
 	},
 
 	["default:axe_steel"] = {
-		replace = "steel",
-		by = material_tools
+		replace = "default:axe_steel",
+		by = {
+			"default:axe_bronze",
+			"default:axe_diamond",
+			"default:axe_mese",
+			"default:axe_stone",
+			"default:axe_wood",
+			"moreores:axe_silver",
+			"moreores:axe_mithril",
+		}
 	},
 
 	["default:pick_steel"] = {
-		replace = "steel",
-		by = material_tools
+		replace = "default:pick_steel",
+		by = {
+			"default:pick_bronze",
+			"default:pick_diamond",
+			"default:pick_mese",
+			"default:pick_stone",
+			"default:pick_wood",
+			"moreores:pick_silver",
+			"moreores:pick_mithril",
+		}
 	},
 
 	["default:shovel_steel"] = {
-		replace = "steel",
-		by = material_tools
+		replace = "default:shovel_steel",
+		by = {
+			"default:shovel_bronze",
+			"default:shovel_diamond",
+			"default:shovel_mese",
+			"default:shovel_stone",
+			"default:shovel_wood",
+			"moreores:shovel_silver",
+			"moreores:shovel_mithril",
+		}
 	},
 
 	["default:sword_steel"] = {
-		replace = "steel",
-		by = material_tools
+		replace = "default:sword_steel",
+		by = {
+			"default:sword_bronze",
+			"default:sword_diamond",
+			"default:sword_mese",
+			"default:sword_stone",
+			"default:sword_wood",
+			"moreores:sword_silver",
+			"moreores:sword_mithril",
+		}
 	},
 
 	["farming:hoe_steel"] = {
-		replace = "steel",
-		by = {"wood", "stone"}
+		replace = "farming:hoe_steel",
+		by = {
+			"farming:hoe_bronze",
+			"farming:hoe_diamond",
+			"farming:hoe_mese",
+			"farming:hoe_stone",
+			"farming:hoe_wood",
+			"moreores:hoe_silver",
+			"moreores:hoe_mithril",
+		}
 	},
 
 	["flowers:chrysanthemum_green"] = {
@@ -479,7 +650,7 @@ local to_compress = {
 
 	["bonemeal:bonemeal"] = {
 		replace = ":bonemeal",
-		by = {"fertilizer","mulch"},
+		by = {":fertiliser",":mulch"},
 	},
 
 	["cartographer:simple_table"] = {
@@ -522,11 +693,11 @@ local to_compress = {
 	},
 
 	["caverealms:glow_emerald_ore"] = {
-		replace = "emerald",
+		replace = "emerald_ore",
 		by = {
-			"amethyst",
-			"crystal",
-			"ruby",
+			"amethyst_ore",
+			"ore", --crystal
+			"ruby_ore",
 		},
 	},
 
@@ -545,6 +716,47 @@ local to_compress = {
 			"gem_ice",
 			"gem_lightning",
 			"gem_poison",
+		}
+	},
+
+	["falls:basin"] = {
+		replace = "basin",
+		by = {
+			"lava_basin",
+			"basin_inv",
+			"lava_basin_inv",
+		}
+	},
+
+	["falls:basin"] = {
+		replace = "basin",
+		by = {
+			"lava_basin",
+			"basin_inv",
+			"lava_basin_inv",
+		}
+	},
+
+	["falls:bucket_turbulent"] = {
+		replace = "bucket",
+		by = {
+			"lava",
+		}
+	},
+
+	["falls:fountain"] = {
+		replace = "fountain",
+		by = {
+			"lava_fountain",
+		}
+	},
+
+	["falls:waterfall_block"] = {
+		replace = "waterfall_block",
+		by = {
+			"lavafall_block",
+			"waterfall_block_inv",
+			"lavafall_block_inv",
 		}
 	},
 }
